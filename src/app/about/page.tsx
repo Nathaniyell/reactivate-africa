@@ -66,7 +66,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About Us</h1>
           <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-100">
-            Learn about our mission, vision, and the impact we're making across Africa.
+            Learn about our mission, vision, and the impact we&apos;re making across Africa.
           </p>
         </div>
       </section>
@@ -108,8 +108,8 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-[#2E4700] mb-4">OUR VISION</h2>
               <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
               <p className="text-gray-700 leading-relaxed">
-                To become Africa's leading mechanism promoting quality education, entrepreneurship, and leadership,
-                leveraging innovative ideas to drive the continent's development.
+                To become Africa&apos;s leading mechanism promoting quality education, entrepreneurship, and leadership,
+                leveraging innovative ideas to drive the continent&apos;s development.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">

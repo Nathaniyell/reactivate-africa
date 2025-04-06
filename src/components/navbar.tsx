@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { X, Menu } from "lucide-react"
+import Image from "next/image"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,8 +16,7 @@ export default function Navbar() {
     <header className="bg-[#1b4d2e] text-white py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex flex-col">
-          <h1 className="text-xl font-bold">Reactivate Africa</h1>
-          <span className="text-sm">Foundation</span>
+        <Image width={60} height={60} src='/reactivate-logo.jpg' alt="Reactivate Africa Logo" />
         </Link>
 
         <nav className="hidden md:flex space-x-8">
