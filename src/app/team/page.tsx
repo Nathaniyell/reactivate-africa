@@ -1,3 +1,18 @@
+import HeroSection from "@/components/component-hero";
+
+interface TeamMember {
+  initials?: string;
+  name?: string;
+  role?: string;
+}
+
+interface TeamSectionProps {
+  title: string;
+  members: TeamMember[];
+  bgColor?: string;
+  cardBgColor?: string;
+  columns?: string;
+}
 
 const teamData = {
   boardOfTrustees: [
@@ -27,8 +42,15 @@ const teamData = {
   ]
 };
 
-const TeamMemberCard = ({ initials, name, role, bgColor = "bg-gray-50" }) => (
-  <div className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow border border-gray-100`}>
+const TeamMemberCard = ({
+  initials,
+  name,
+  role,
+  bgColor = "bg-gray-50"
+}: TeamMember & { bgColor?: string }) => (
+  <div
+    className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow border border-gray-100`}
+  >
     {initials && (
       <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
         <span className="text-gray-500 text-2xl font-medium">{initials}</span>
@@ -39,7 +61,13 @@ const TeamMemberCard = ({ initials, name, role, bgColor = "bg-gray-50" }) => (
   </div>
 );
 
-const TeamSection = ({ title, members, bgColor = "bg-white", cardBgColor = "bg-gray-50", columns = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3" }) => (
+const TeamSection = ({
+  title,
+  members,
+  bgColor = "bg-white",
+  cardBgColor = "bg-gray-50",
+  columns = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+}: TeamSectionProps) => (
   <section className={`py-16 ${bgColor}`}>
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
@@ -48,7 +76,7 @@ const TeamSection = ({ title, members, bgColor = "bg-white", cardBgColor = "bg-g
       </div>
       <div className={`grid ${columns} gap-6 max-w-6xl mx-auto`}>
         {members.map((member, index) => (
-          <TeamMemberCard 
+          <TeamMemberCard
             key={index}
             initials={member.initials}
             name={member.name}
@@ -65,24 +93,18 @@ export default function TeamPage() {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Hero Section */}
-      <section className="bg-[#2E4700] text-white py-20 md:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Our Team</h1>
-          <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-100">
-            Meet the dedicated individuals behind Reactivate Africa Foundation.
-          </p>
-        </div>
-      </section>
-
-      {/* Board of Trustees Section */}
-      <TeamSection 
-        title="Board of Trustees" 
-        members={teamData.boardOfTrustees} 
+      <HeroSection
+        title="Our"
+        title2="Team"
+        tagline=" Meet the dedicated individuals behind Reactivate Africa Foundation."
       />
 
+      {/* Board of Trustees Section */}
+      <TeamSection title="Board of Trustees" members={teamData.boardOfTrustees} />
+
       {/* Advisory Committee Section */}
-      <TeamSection 
-        title="Advisory Committee" 
+      <TeamSection
+        title="Advisory Committee"
         members={teamData.advisoryCommittee}
         bgColor="bg-gray-50"
         cardBgColor="bg-white"
@@ -90,8 +112,8 @@ export default function TeamPage() {
       />
 
       {/* Management Team Section */}
-      <TeamSection 
-        title="Management Team" 
+      <TeamSection
+        title="Management Team"
         members={teamData.managementTeam}
         columns="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
       />

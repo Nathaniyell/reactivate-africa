@@ -1,17 +1,15 @@
+import HeroSection from "@/components/component-hero"
 import Link from "next/link"
 
 export default function GetInvolvedPage() {
   return (
     <>
-      {/* Page Header */}
-      <section className="bg-[#1b4d2e] text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get Involved</h1>
-          <p className="max-w-3xl mx-auto text-lg">
-            Join us in our mission to empower young Africans and drive sustainable change across the continent.
-          </p>
-        </div>
-      </section>
+       <HeroSection
+        title="Get"
+        title2="Involved"
+        tagline="Join us in our mission to empower young Africans and drive sustainable change across the continent."
+      />
+    
 
       {/* Ways to Get Involved */}
       <section className="py-16 bg-[#faf7ed]">

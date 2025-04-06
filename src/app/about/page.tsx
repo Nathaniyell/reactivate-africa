@@ -1,3 +1,4 @@
+import HeroSection from "@/components/component-hero";
 import { ChevronRight } from "lucide-react";
 
 
@@ -61,16 +62,11 @@ const strategies = [
 export default function AboutPage() {
   return (
     <div className="max-w-6xl mx-auto">
-      {/* Hero Section */}
-      <section className="bg-[#2E4700] text-white py-20 md:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About Us</h1>
-          <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-100">
-            Learn about our mission, vision, and the impact we&apos;re making across Africa.
-          </p>
-        </div>
-      </section>
-
+       <HeroSection
+        title="About"
+        title2="Us"
+        tagline="Learn about our mission, vision, and the impact we're making across Africa."
+      />
       {/* About Us Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
