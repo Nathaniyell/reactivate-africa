@@ -12,7 +12,7 @@ export default function MissionSection() {
             </p>
             <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#F08232]">
               <p className="italic text-gray-700">
-                "Investing in youth is fundamental to national development and societal progress."
+              &quot;Investing in youth is fundamental to national development and societal progress.&quot;
               </p>
             </div>
           </div>
