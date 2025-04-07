@@ -11,8 +11,8 @@ const contactInfo = [
   {
     icon: <Phone className="text-[#F08232]" size={24} />,
     title: "Phone",
-    details: ["+234 808 475 3771", "+234 704 133 4617"],
-    link: "tel:+2348084753771"
+    details: ["+234 704 133 4617"],
+    link: "tel:+234 704 133 4617"
   },
    {
     icon: <Instagram className="text-[#F08232]" size={24} />,
