@@ -47,7 +47,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links Column */}
+          
           <div>
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-[#F08232]/30">Quick Links</h3>
             <nav className="grid grid-cols-1 gap-3 hover:bg-[rgba(0,0,0,0.3)] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
@@ -74,7 +74,7 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Contact Column */}
+          
           <div>
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-[#F08232]/30">Contact Us</h3>
             <div className="space-y-4 hover:bg-[rgba(0,0,0,0.3)] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
@@ -90,14 +90,14 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <Phone className="mr-3 text-[#F08232]" size={18} />
-                <a href="tel:+2348084753771" className="text-gray-300 hover:text-[#F08232] transition-colors">
-                  +234-808-475-3771
+                <a href="tel:+234 704 133 4617" className="text-gray-300 hover:text-[#F08232] transition-colors">
+                +234 704 133 4617
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Newsletter Column */}
+          
           <div>
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-[#F08232]/30">Stay Updated</h3>
             <p className="text-gray-300 mb-4">
