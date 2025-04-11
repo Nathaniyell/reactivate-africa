@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
-          <div className="space-y-6 hover:bg-[rgba(0,0,0,0.3)] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 hover:px-2 duration-300">
+          <div className="space-y-6 hover:bg-[rgba(0,0,0,0.3)] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
             <div className="flex items-center">
               <div className="bg-white p-2 rounded-lg mr-4">
                 <Image
