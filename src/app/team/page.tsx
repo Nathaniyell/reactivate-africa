@@ -16,48 +16,44 @@ interface TeamSectionProps {
 
 const teamData = {
   boardOfTrustees: [
-    { initials: "WK", name: "Williams G. Kennedy" },
-    { initials: "WA", name: "Willie W. Akpan" },
-    { initials: "EU", name: "Ememobong G. Udoma" },
-    { initials: "UU", name: "Unyime A. Utin" },
-    { initials: "EN", name: "Esther M. Ndon" },
-    { initials: "EA", name: "Ememabasi Akpan" },
-    { initials: "EJ", name: "Emmanuel Jones" },
-    { initials: "AW", name: "Amah Williams PhD" },
-    { initials: "EA", name: "Eno Attah PhD" },
-    { initials: "JK", name: "Jenneh Kormoh" }
+    { name: "Dr Amah Williams", role: "Board Chair" },
+    { name: "Pst Emmanuel Jones", role: "Board Member" },
+    { name: "Dr (Mrs) Eno Attah", role: "Board Member" },
+    { name: "Mrs Jenneh Kormoh", role: "Board Member" },
+    { name: "Pharm Eteyen Willie", role: "Board Member" },
+    { name: "Dr Ukoima U", role: "Board Member" },
+    { name: "Williams G. Kennedy", role: "Board Member" },
   ],
   advisoryCommittee: [
-    { initials: "EI", name: "Mr. Emmanuel Ikule" },
-    { initials: "EI", name: "Barr. Ekemini Ikpe" }
+    { name: "Mr. Emmanuel Ikule" },
+    { name: "Barr. Ekemini Ikpe" },
   ],
   managementTeam: [
-    { role: "Executive Director" },
-    { role: "Head, Administration & Finance" },
-    { role: "Head, Programs" },
+    { name: "Willie Akpan", role: "Executive Director" },
+    { name: "Lucky Udoekong", role: "Head, Administration & Finance" },
+    { name: "Itohowo Ekerete", role: "Head, Programs" },
     { role: "Head, Communications & Partnerships" },
     { role: "Head, Volunteers" },
-    { role: "Identity Management & Creative Lead" },
-    { role: "Administrative Assistant" }
-  ]
+    { name: "Mbuotidem Ekarika", role: "Identity Management & Creative Lead" },
+    { role: "Administrative Assistant" },
+  ],
 };
 
 const TeamMemberCard = ({
-  initials,
   name,
   role,
-  bgColor = "bg-gray-50"
+  bgColor = "bg-gray-50",
 }: TeamMember & { bgColor?: string }) => (
   <div
     className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow border border-gray-100`}
   >
-    {initials && (
-      <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-        <span className="text-gray-500 text-2xl font-medium">{initials}</span>
-      </div>
-    )}
-    {name && <h4 className="text-lg font-semibold text-[#2E4700]">{name}</h4>}
-    {role && <h4 className="text-lg font-semibold text-[#2E4700]">{role}</h4>}
+    <div className="w-20 h-20 bg-[#F5F5F5] rounded-full mx-auto mb-4 flex items-center justify-center">
+      <span className="text-[#892626] text-xl font-semibold">
+        {name?.split(" ").map((n) => n[0]).join("")}
+      </span>
+    </div>
+    {name && <h4 className="text-lg font-semibold text-black">{name}</h4>}
+    {role && <p className="text-sm text-[#F08232] mt-1">{role}</p>}
   </div>
 );
 
@@ -66,19 +62,18 @@ const TeamSection = ({
   members,
   bgColor = "bg-white",
   cardBgColor = "bg-gray-50",
-  columns = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+  columns = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3",
 }: TeamSectionProps) => (
   <section className={`py-16 ${bgColor}`}>
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-[#2E4700] mb-4">{title}</h2>
+        <h2 className="text-3xl font-bold text-[#892626] mb-4">{title}</h2>
         <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>
       </div>
       <div className={`grid ${columns} gap-6 max-w-6xl mx-auto`}>
         {members.map((member, index) => (
           <TeamMemberCard
             key={index}
-            initials={member.initials}
             name={member.name}
             role={member.role}
             bgColor={cardBgColor}
@@ -91,32 +86,31 @@ const TeamSection = ({
 
 export default function TeamPage() {
   return (
-    <div className="max-w-6xl mx-auto">
-      {/* Hero Section */}
+    <>
       <HeroSection
         title="Our"
         title2="Team"
-        tagline=" Meet the dedicated individuals behind Reactivate Africa Foundation."
+        tagline="Meet the dedicated individuals behind Reactivate Africa Foundation."
       />
+      <div className="max-w-6xl mx-auto">
 
-      {/* Board of Trustees Section */}
-      <TeamSection title="Board of Trustees" members={teamData.boardOfTrustees} />
 
-      {/* Advisory Committee Section */}
-      <TeamSection
-        title="Advisory Committee"
-        members={teamData.advisoryCommittee}
-        bgColor="bg-gray-50"
-        cardBgColor="bg-white"
-        columns="grid-cols-1 sm:grid-cols-2 max-w-3xl"
-      />
+        <TeamSection title="Board of Trustees" members={teamData.boardOfTrustees} />
 
-      {/* Management Team Section */}
-      <TeamSection
-        title="Management Team"
-        members={teamData.managementTeam}
-        columns="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-      />
-    </div>
+        <TeamSection
+          title="Advisory Committee"
+          members={teamData.advisoryCommittee}
+          bgColor="bg-gray-50"
+          cardBgColor="bg-white"
+          columns="grid-cols-1 sm:grid-cols-2 max-w-3xl"
+        />
+
+        <TeamSection
+          title="Management Team"
+          members={teamData.managementTeam}
+          columns="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+        />
+      </div>
+    </>
   );
 }
