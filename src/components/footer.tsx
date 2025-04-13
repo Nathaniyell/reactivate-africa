@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
+import { address } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -74,7 +75,7 @@ export default function Footer() {
             <div className="space-y-4 hover:bg-[#ffffff1a] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
               <div className="flex items-start">
                 <MapPin className="mt-1 mr-3 flex-shrink-0 text-[#f7923e]" size={18} />
-                <span className="text-white/80">123 Empowerment Avenue, Lagos, Nigeria</span>
+                <span className="text-white/80">{address}</span>
               </div>
               <div className="flex items-center">
                 <Mail className="mr-3 text-[#f7923e]" size={18} />
