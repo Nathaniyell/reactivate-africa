@@ -13,13 +13,13 @@ export default function ProgramsPage() {
     <div>
       <HeroSection isContactPage />
       <section className="max-w-6xl mx-auto py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-2 md:px-4">
           <div className="space-y-12 max-w-5xl mx-auto">
             {programs.map((program) => (
               <div
                 key={program.id}
                 id={program.id}
-                className="scroll-mt-20 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                className="scroll-mt-20 bg-white p-4 md:p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100"
               >
                 <h3 className="text-2xl font-bold text-[#892626] mb-4">{program.title}</h3>
                 <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
