@@ -1,4 +1,5 @@
 import HeroSection from "@/components/component-hero";
+import Pathways from "@/components/impact-pathways";
 import { ChevronRight } from "lucide-react";
 
 
@@ -25,24 +26,7 @@ const coreValues = [
   }
 ];
 
-const impactPathways = [
-  {
-    title: "Educational Support",
-    description: "We implement educational initiatives in collaboration with foundations, government agencies, institutions, and individuals to provide aid and support to underserved teenagers, enabling access to quality education and skill development for national growth."
-  },
-  {
-    title: "Supportive Social/Gender Ecosystem",
-    description: "We create an inclusive ecosystem that supports the aspirations of young Africans, providing access to resources and networks to address prevalent academic and social challenges."
-  },
-  {
-    title: "Social Innovation & Leadership Development",
-    description: "We establish mentorship programs and social innovation initiatives that equip young people with essential skills, knowledge, and experiences to become successful entrepreneurs and change-driven leaders."
-  },
-  {
-    title: "Sustainable Development",
-    description: "We design and implement programs that contribute to achieving the United Nations' Sustainable Development Goals (SDGs)."
-  }
-];
+
 
 const focusAreas = [
   "Education",
@@ -142,25 +126,7 @@ export default function AboutPage() {
       </section>
 
       {/* Impact Pathways Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2E4700] mb-4">OUR FOUR-POINT IMPACT PATHWAYS</h2>
-            <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {impactPathways.map((pathway, index) => (
-              <div 
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100"
-              >
-                <h3 className="text-xl font-semibold text-[#2E4700] mb-3">{pathway.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{pathway.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Pathways />
 
       {/* Focus Areas & Strategy Section */}
       <section className="py-16 bg-white">
