@@ -1,61 +1,24 @@
 import HeroSection from "@/components/component-hero";
 import Pathways from "@/components/impact-pathways";
+import { coreValues, focusAreas, strategies } from "@/lib/data";
 import { ChevronRight } from "lucide-react";
 
 
-const coreValues = [
-  {
-    title: "Innovation",
-    description: "We employ creative and forward-thinking approaches to achieve impactful results."
-  },
-  {
-    title: "Partnership",
-    description: "We collaborate with individuals, organizations, and governments to maximize success in all our projects."
-  },
-  {
-    title: "Respect",
-    description: "We uphold professionalism and mutual respect in our engagements with partners, donors, and stakeholders."
-  },
-  {
-    title: "Inclusivity",
-    description: "We promote equal opportunities, ensuring a level playing field for all."
-  },
-  {
-    title: "Teamwork",
-    description: "We foster collaboration and synergy across all levels of our organization."
-  }
-];
-
-
-
-const focusAreas = [
-  "Education",
-  "Gender & Social Support",
-  "Entrepreneurship & Leadership",
-  "Sustainable Development",
-  "Youth Development"
-];
-
-const strategies = [
-  "Campaigns & Advocacy",
-  "Strategic Partnerships & Collaborations",
-  "Training & Mentorship",
-  "Community Engagement"
-];
 
 export default function AboutPage() {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="">
        <HeroSection
         title="About"
         title2="Us"
+        backgroundImage="/raf.jpg"
         tagline="Learn about our mission, vision, and the impact we're making across Africa."
       />
       {/* About Us Section */}
-      <section className="py-16 bg-white">
+      <section className="max-w-6xl mx-auto py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#2E4700] mb-8">Our Story</h2>
+            <h2 className="text-3xl font-bold text-[#892626] mb-8">Our Story</h2>
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p>
                 Reactivate Africa Foundation is a non-profit organization established in 2019 with a mission to empower
@@ -85,7 +48,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <h2 className="text-2xl font-bold text-[#2E4700] mb-4">OUR VISION</h2>
+              <h2 className="text-2xl font-bold text-[#892626] mb-4">OUR VISION</h2>
               <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
               <p className="text-gray-700 leading-relaxed">
                 To become Africa&apos;s leading mechanism promoting quality education, entrepreneurship, and leadership,
@@ -93,7 +56,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <h2 className="text-2xl font-bold text-[#2E4700] mb-4">OUR MISSION</h2>
+              <h2 className="text-2xl font-bold text-[#892626] mb-4">OUR MISSION</h2>
               <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
               <p className="text-gray-700 leading-relaxed">
                 To inspire, nurture, and equip young Africans with the resources, awareness and platform necessary to
@@ -108,7 +71,7 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#2E4700] mb-4">OUR CORE VALUES</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#892626] mb-4">OUR CORE VALUES</h2>
             <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
@@ -117,7 +80,7 @@ export default function AboutPage() {
                 key={index}
                 className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow border border-gray-100"
               >
-                <h3 className="text-xl font-semibold text-[#2E4700] mb-3">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-[#892626] mb-3">{value.title}</h3>
                 <p className="text-gray-700 text-sm">{value.description}</p>
               </div>
             ))}
@@ -133,7 +96,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-xl">
-              <h2 className="text-2xl font-bold text-[#2E4700] mb-4">OUR FOCUS AREAS</h2>
+              <h2 className="text-2xl font-bold text-[#892626] mb-4">OUR FOCUS AREAS</h2>
               <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
               <ul className="space-y-3">
                 {focusAreas.map((area, index) => (
@@ -145,7 +108,7 @@ export default function AboutPage() {
               </ul>
             </div>
             <div className="bg-gray-50 p-8 rounded-xl">
-              <h2 className="text-2xl font-bold text-[#2E4700] mb-4">OUR STRATEGY</h2>
+              <h2 className="text-2xl font-bold text-[#892626] mb-4">OUR STRATEGY</h2>
               <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
               <ul className="space-y-3">
                 {strategies.map((strategy, index) => (

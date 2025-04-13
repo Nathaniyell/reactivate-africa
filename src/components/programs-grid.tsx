@@ -26,7 +26,7 @@ export default function ProgramsGrid() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#eee]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-[#f3693a] mb-8 text-center">Our Programs</h2>
 
