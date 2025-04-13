@@ -1,66 +1,77 @@
-import { BookOpen, Users, Flag, GraduationCap, DollarSign, Compass } from "lucide-react"
+import {
+  BookOpen,
+  Users,
+  Flag,
+  GraduationCap,
+  DollarSign,
+  Compass,
+} from "lucide-react";
+import React from "react";
 
 export default function FocusImpact() {
   return (
-    <section className="py-16 bg-[#faf7ed]">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12">
+    <section className="py-16 bg-[#892626]">
+      <div className="w-10/12 mx-auto px-4">
+        <div className="grid gap-16">
           {/* Focus Areas */}
           <div>
-            <h2 className="text-3xl font-bold text-[#1b4d2e] mb-8">Focus Areas</h2>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-[#faf7ed] border border-gray-200 p-4 rounded-md text-center">
-                <div className="bg-[#1b4d2e] w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <BookOpen className="text-white" size={16} />
+            <h2 className="text-3xl font-bold text-white mb-10 text-center">
+              Focus Areas
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { icon: <BookOpen size={18} />, title: "Education", iconBg: "#f7923e" },
+                { icon: <Users size={18} />, title: "Youth Dev.", iconBg: "#f7923e" },
+                { icon: <Flag size={18} />, title: "Sustainability", iconBg: "#f7923e" },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-[#faf7ed] border border-[#f7923e]/30 p-5 rounded-md text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3"
+                    style={{ backgroundColor: item.iconBg }}
+                  >
+                    {React.cloneElement(item.icon, { className: "text-white" })}
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-800">
+                    {item.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm font-semibold text-[#1b4d2e]">Education</h3>
-              </div>
-
-              <div className="bg-[#faf7ed] border border-gray-200 p-4 rounded-md text-center">
-                <div className="bg-[#1b4d2e] w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="text-white" size={16} />
-                </div>
-                <h3 className="text-sm font-semibold text-[#1b4d2e]">Youth Dev.</h3>
-              </div>
-
-              <div className="bg-[#faf7ed] border border-gray-200 p-4 rounded-md text-center">
-                <div className="bg-[#1b4d2e] w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Flag className="text-white" size={16} />
-                </div>
-                <h3 className="text-sm font-semibold text-[#1b4d2e]">Sustainability</h3>
-              </div>
+              ))}
             </div>
           </div>
 
           {/* Impact Pathways */}
           <div>
-            <h2 className="text-3xl font-bold text-[#1b4d2e] mb-8">Impact Pathways</h2>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-[#faf7ed] border border-gray-200 p-4 rounded-md text-center">
-                <div className="bg-[#1b4d2e] w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <GraduationCap className="text-white" size={16} />
+            <h2 className="text-3xl font-bold text-white mb-10 text-center">
+              Impact Pathways
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { icon: <GraduationCap size={18} />, title: "Educational Support", iconBg: "#f7923e" },
+                { icon: <DollarSign size={18} />, title: "Gender Ecosystem", iconBg: "#f7923e" },
+                { icon: <Compass size={18} />, title: "Social Innovation", iconBg: "#f7923e" },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-[#faf7ed] border border-[#f7923e]/30 p-5 rounded-md text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3"
+                    style={{ backgroundColor: item.iconBg }}
+                  >
+                    {React.cloneElement(item.icon, { className: "text-white" })}
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-800">
+                    {item.title}
+                  </h3>
                 </div>
-                <h3 className="text-sm font-semibold text-[#1b4d2e]">Educational Support</h3>
-              </div>
-
-              <div className="bg-[#faf7ed] border border-gray-200 p-4 rounded-md text-center">
-                <div className="bg-[#1b4d2e] w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <DollarSign className="text-white" size={16} />
-                </div>
-                <h3 className="text-sm font-semibold text-[#1b4d2e]">Gender Ecosystem</h3>
-              </div>
-
-              <div className="bg-[#faf7ed] border border-gray-200 p-4 rounded-md text-center">
-                <div className="bg-[#1b4d2e] w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Compass className="text-white" size={16} />
-                </div>
-                <h3 className="text-sm font-semibold text-[#1b4d2e]">Social Innovation</h3>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
