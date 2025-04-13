@@ -1,17 +1,17 @@
 import HeroSection from "@/components/component-hero";
+import FocusImpact from "@/components/focus-impact";
 import Pathways from "@/components/impact-pathways";
-import { coreValues, focusAreas, strategies } from "@/lib/data";
-import { ChevronRight } from "lucide-react";
+import { coreValues } from "@/lib/data";
 
 
 
 export default function AboutPage() {
   return (
     <div className="">
-       <HeroSection
+      <HeroSection
         title="About"
         title2="Us"
-        backgroundImage="/raf.jpg"
+        backgroundImage="/raf2.jpg"
         tagline="Learn about our mission, vision, and the impact we're making across Africa."
       />
       {/* About Us Section */}
@@ -76,7 +76,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {coreValues.map((value, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow border border-gray-100"
               >
@@ -87,41 +87,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Impact Pathways Section */}
       <Pathways />
+      <FocusImpact />
 
-      {/* Focus Areas & Strategy Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h2 className="text-2xl font-bold text-[#892626] mb-4">OUR FOCUS AREAS</h2>
-              <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
-              <ul className="space-y-3">
-                {focusAreas.map((area, index) => (
-                  <li key={index} className="flex items-start">
-                    <ChevronRight className="text-[#F08232] mt-1 flex-shrink-0" size={18} />
-                    <span className="ml-2 text-gray-700">{area}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gray-50 p-8 rounded-xl">
-              <h2 className="text-2xl font-bold text-[#892626] mb-4">OUR STRATEGY</h2>
-              <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
-              <ul className="space-y-3">
-                {strategies.map((strategy, index) => (
-                  <li key={index} className="flex items-start">
-                    <ChevronRight className="text-[#F08232] mt-1 flex-shrink-0" size={18} />
-                    <span className="ml-2 text-gray-700">{strategy}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
   )
 }
