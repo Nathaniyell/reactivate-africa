@@ -14,18 +14,18 @@ const HeroSection = ({
     backgroundImage,
 }: HeroProps) => {
     return (
-        <section 
+        <section
             className="relative w-full text-white overflow-hidden min-h-[80vh] flex items-center justify-center"
             style={
-                backgroundImage 
-                    ? { 
+                backgroundImage
+                    ? {
                         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${backgroundImage})`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
                         backgroundAttachment: 'fixed'
                     }
-                    : { 
+                    : {
                         backgroundImage: 'linear-gradient(to bottom right, #892626, #f7923e)'
                     }
             }
@@ -41,13 +41,14 @@ const HeroSection = ({
 
             <div className="relative container mx-auto px-4 py-28 md:py-36">
                 <div className="max-w-4xl mx-auto text-center">
-                    <div className="mb-6 inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                        {isContactPage && (
-                            <span className="text-white font-semibold tracking-wider">
-                                EMPOWERING AFRICA&apos;S FUTURE
-                            </span>
-                        )}
-                    </div>
+                    {!backgroundImage && <div className="mb-6 inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+
+                        <span className="text-white font-semibold tracking-wider">
+                            Inspiring Youth-led Change
+                        </span>
+
+                    </div>}
+
 
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#ffffcc]">
