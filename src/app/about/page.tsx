@@ -2,7 +2,7 @@ import HeroSection from "@/components/component-hero";
 import FocusImpact from "@/components/focus-impact";
 import Pathways from "@/components/impact-pathways";
 import { coreValues } from "@/lib/data";
-
+import { Target, Rocket } from "lucide-react";
 
 
 export default function AboutPage() {
@@ -45,27 +45,38 @@ export default function AboutPage() {
 
       {/* Vision & Mission Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <h2 className="text-2xl font-bold text-[#892626] mb-4">OUR VISION</h2>
-              <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
-              <p className="text-gray-700 leading-relaxed">
-                To become Africa&apos;s leading mechanism promoting quality education, entrepreneurship, and leadership,
-                leveraging innovative ideas to drive the continent&apos;s development.
-              </p>
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-3 bg-[#FEEBE1] rounded-full text-[#F08232]">
+                <Target className="w-6 h-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-[#892626]">OUR VISION</h2>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <h2 className="text-2xl font-bold text-[#892626] mb-4">OUR MISSION</h2>
-              <div className="w-16 h-1 bg-[#F08232] mb-6"></div>
-              <p className="text-gray-700 leading-relaxed">
-                To inspire, nurture, and equip young Africans with the resources, awareness and platform necessary to
-                transform education, entrepreneurship, and leadership outcomes, while driving social change.
-              </p>
+            
+            <p className="text-gray-700 leading-relaxed">
+              To become Africa&apos;s leading mechanism promoting quality education, entrepreneurship, and leadership,
+              leveraging innovative ideas to drive the continent&apos;s development.
+            </p>
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-3 bg-[#FEEBE1] rounded-full text-[#F08232]">
+                <Rocket className="w-6 h-6" />
+              </div>
+              <h2 className="text-2xl font-bold text-[#892626]">OUR MISSION</h2>
             </div>
+            
+            <p className="text-gray-700 leading-relaxed">
+              To inspire, nurture, and equip young Africans with the resources, awareness and platform necessary to
+              transform education, entrepreneurship, and leadership outcomes, while driving social change.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Core Values Section */}
       <section className="py-16 bg-white">
