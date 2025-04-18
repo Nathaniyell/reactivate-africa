@@ -68,7 +68,8 @@ const TeamSection = ({
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-[#892626] mb-4">{title}</h2>
-        <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>
+        {title !== "" && <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>}
+
       </div>
       <div className={`grid ${columns} gap-6 max-w-6xl mx-auto`}>
         {members.map((member, index) => (
@@ -93,8 +94,11 @@ export default function TeamPage() {
         tagline="Meet the dedicated individuals behind Reactivate Africa Foundation."
       />
       <div className="max-w-6xl mx-auto">
-
-
+        <TeamSection
+          title=""
+          members={teamData.managementTeam}
+          columns="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+        />
         <TeamSection title="Board of Trustees" members={teamData.boardOfTrustees} />
 
         <TeamSection
@@ -105,11 +109,6 @@ export default function TeamPage() {
           columns="grid-cols-1 sm:grid-cols-2 max-w-3xl"
         />
 
-        <TeamSection
-          title="Management Team"
-          members={teamData.managementTeam}
-          columns="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-        />
       </div>
     </>
   );
