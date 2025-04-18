@@ -24,7 +24,7 @@ export default function Footer() {
                 <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f7923e] to-[#e18f49]">
                   Reactivate Africa
                 </h2>
-                <p className="text-sm text-white/80">Empowering Africa&apos;s Future</p>
+                <p className="text-sm text-white/80">Inspiring Youth-led Change</p>
               </div>
             </div>
 
