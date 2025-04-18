@@ -104,10 +104,10 @@ export default function Footer() {
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-white/70 text-sm">
           <p>© {new Date().getFullYear()} Reactivate Africa Foundation. All rights reserved.</p>
           <div className="flex justify-center space-x-6 mt-4">
-            <Link href="/privacy-policy" className="hover:text-[#f7923e] transition-colors">
+            <Link href="/" className="hover:text-[#f7923e] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="hover:text-[#f7923e] transition-colors">
+            <Link href="/" className="hover:text-[#f7923e] transition-colors">
               Terms of Service
             </Link>
           </div>
