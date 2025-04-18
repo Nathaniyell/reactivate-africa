@@ -1,41 +1,61 @@
+import {
+  BookOpen,
+  Users,
+  Lightbulb,
+  Leaf,
+  Sparkles,
+  Handshake,
+  Hand,
+  Equal,
+  Group
+} from "lucide-react";
 const impactPathways = [
   {
     title: "Educational Support",
-    description: "We implement educational initiatives in collaboration with foundations, government agencies, institutions, and individuals to provide aid and support to underserved teenagers, enabling access to quality education and skill development for national growth."
+    description: "We implement educational initiatives in collaboration with foundations, government agencies, institutions, and individuals to provide aid and support to underserved teenagers, enabling access to quality education and skill development for national growth.",
+    icon: BookOpen
   },
   {
     title: "Supportive Social/Gender Ecosystem",
-    description: "We create an inclusive ecosystem that supports the aspirations of young Africans, providing access to resources and networks to address prevalent academic and social challenges."
+    description: "We create an inclusive ecosystem that supports the aspirations of young Africans, providing access to resources and networks to address prevalent academic and social challenges.",
+    icon: Users
   },
   {
     title: "Social Innovation & Leadership Development",
-    description: "We establish mentorship programs and social innovation initiatives that equip young people with essential skills, knowledge, and experiences to become successful entrepreneurs and change-driven leaders."
+    description: "We establish mentorship programs and social innovation initiatives that equip young people with essential skills, knowledge, and experiences to become successful entrepreneurs and change-driven leaders.",
+    icon: Lightbulb
   },
   {
     title: "Sustainable Development",
-    description: "We design and implement programs that contribute to achieving the United Nations' Sustainable Development Goals (SDGs)."
+    description: "We design and implement programs that contribute to achieving the United Nations' Sustainable Development Goals (SDGs).",
+    icon: Leaf
   }
 ];
 const coreValues = [
   {
     title: "Innovation",
-    description: "We employ creative and forward-thinking approaches to achieve impactful results."
+    description: "We employ creative and forward-thinking approaches to achieve impactful results.",
+    icon: Sparkles
   },
   {
     title: "Partnership",
-    description: "We collaborate with individuals, organizations, and governments to maximize success in all our projects."
+    description: "We collaborate with individuals, organizations, and governments to maximize success in all our projects.",
+    icon: Handshake
   },
   {
     title: "Respect",
-    description: "We uphold professionalism and mutual respect in our engagements with partners, donors, and stakeholders."
+    description: "We uphold professionalism and mutual respect in our engagements with partners, donors, and stakeholders.",
+    icon: Hand
   },
   {
     title: "Inclusivity",
-    description: "We promote equal opportunities, ensuring a level playing field for all."
+    description: "We promote equal opportunities, ensuring a level playing field for all.",
+    icon: Equal
   },
   {
     title: "Teamwork",
-    description: "We foster collaboration and synergy across all levels of our organization."
+    description: "We foster collaboration and synergy across all levels of our organization.",
+    icon: Group
   }
 ];
 
