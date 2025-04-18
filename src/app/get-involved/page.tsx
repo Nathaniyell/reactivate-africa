@@ -65,6 +65,7 @@ export default function GetInvolvedPage() {
                     <Link
                       href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(option.message)}`}
                       className="bg-[#F08232] hover:bg-[#e07122] text-white font-bold py-2 px-6 rounded-md transition-colors inline-block"
+                      target="_blank"
                     >
                       {option.linkText}
                     </Link>
