@@ -15,7 +15,7 @@ const HeroSection = ({
 }: HeroProps) => {
     return (
         <section
-            className="relative w-full text-white overflow-hidden min-h-[80vh] flex items-center justify-center"
+            className="relative w-full overflow-hidden min-h-[80vh] flex items-center justify-center"
             style={
                 backgroundImage
                     ? {
@@ -26,48 +26,40 @@ const HeroSection = ({
                         backgroundAttachment: 'fixed'
                     }
                     : {
-                        backgroundImage: 'linear-gradient(to bottom right, #892626, #f7923e)'
+                        backgroundColor: 'white'
                     }
             }
         >
-            {/* Animated blobs - only show when no background image is provided */}
-            {!backgroundImage && (
-                <div className="absolute inset-0 overflow-hidden opacity-20">
-                    <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f7923e] rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-                    <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-[#892626] rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-                    <div className="absolute bottom-0 left-1/2 w-80 h-80 bg-[#f7923e] rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-                </div>
-            )}
-
-            <div className="relative container mx-auto px-4 py-28 md:py-36">
+            <div className={`relative container mx-auto px-4 ${backgroundImage ? 'py-20' : 'py-16 min-h-[80vh] flex items-center justify-center border-b-[#f7923e] border-b-2 bg-rose-100 '}`}>
                 <div className="max-w-4xl mx-auto text-center">
-                    {!backgroundImage && <div className="mb-6 inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                    {!backgroundImage && (
+                        <div className="mb-4 inline-block px-4 py-2 bg-[#892626]/10 rounded-full">
+                            <span className="text-[#892626] font-semibold tracking-wider">
+                                Inspiring Youth-led Change
+                            </span>
+                        </div>
+                    )}
 
-                        <span className="text-white font-semibold tracking-wider">
-                            Inspiring Youth-led Change
-                        </span>
-
-                    </div>}
-
-
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#ffffcc]">
+                    <h1 className={`${backgroundImage ? 'text-white' : 'text-[#892626]'} text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight`}>
+                        <span className={backgroundImage ? "bg-clip-text text-transparent bg-gradient-to-r from-white to-[#ffffcc]" : ""}>
                             {title || "Our Innovative"}
                         </span>{" "}
                         {isContactPage && <br />}
-                        <span className="text-white">{title2 || "Programs"}</span>
+                        <span className={backgroundImage ? "text-white" : "text-[#f7923e]"}>{title2 || "Programs"}</span>
                     </h1>
 
-                    <p className="max-w-3xl mx-auto text-xl md:text-2xl text-white/90 mb-10 leading-relaxed">
+                    <p className={`max-w-3xl mx-auto text-lg md:text-xl ${backgroundImage ? 'text-white/90' : 'text-gray-700'} mb-6 leading-relaxed`}>
                         {tagline ||
                             "Transforming lives through education, entrepreneurship, and leadership development initiatives designed for Africa's youth."}
                     </p>
+
                 </div>
             </div>
 
+
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
                 <svg
-                    className="w-8 h-8 text-white"
+                    className={`w-8 h-8 ${backgroundImage ? "text-white" : "text-[#892626]"}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -81,6 +73,7 @@ const HeroSection = ({
                     />
                 </svg>
             </div>
+
         </section>
     );
 };
