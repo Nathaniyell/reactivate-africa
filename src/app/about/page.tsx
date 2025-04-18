@@ -75,13 +75,16 @@ export default function AboutPage() {
             <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-            {coreValues.map((value, index) => (
+            {coreValues.map(({ title, description, icon: Icon }, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow border border-gray-100"
+                className="bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow border border-gray-100 text-center flex flex-col items-center"
               >
-                <h3 className="text-xl font-semibold text-[#892626] mb-3">{value.title}</h3>
-                <p className="text-gray-700 text-sm">{value.description}</p>
+                <div className="p-3 mb-4 bg-[#FEEBE1] rounded-full text-[#F08232]">
+                  <Icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-semibold text-[#892626] mb-2">{title}</h3>
+                <p className="text-gray-700 text-sm">{description}</p>
               </div>
             ))}
           </div>
