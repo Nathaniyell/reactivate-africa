@@ -79,7 +79,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <Mail className="mr-3 text-[#f7923e]" size={18} />
-              <div className="space-y-2">
+              <div className="space-y-2 flex flex-col">
                 <a href="mailto:info@reactivateafrica.org" className="text-white/80 hover:text-[#f7923e] transition-colors">
                   info@reactivateafrica.org
                 </a>
