@@ -1,12 +1,10 @@
 import HeroSection from "@/components/component-hero"
 import Link from "next/link"
-import { Handshake, Heart, Users, Share2 } from 'lucide-react';  
-
+import { Handshake, Heart, Users, Share2, Instagram, Twitter, Facebook } from 'lucide-react';  
 export default function GetInvolvedPage() {
-  
+
   const whatsappNumber = '+2348084753771'; 
-
-
+  
   const involvementOptions = [
     {
       title: "Partner with Us",
@@ -19,7 +17,7 @@ export default function GetInvolvedPage() {
       title: "Donate",
       description: "Your financial support helps us expand our programs and reach more young people across Africa. Every contribution makes a difference.",
       linkText: "Make a Donation",
-      icon: <Heart className="text-4xl text-[#892626]" />, 
+      icon: <Heart className="text-4xl text-[#892626]" />,
       message: "Hello, I would like to make a donation to support your cause."
     },
     {
@@ -34,7 +32,8 @@ export default function GetInvolvedPage() {
       description: "Help us amplify our message by sharing our work with your network. Follow us on social media and join our community of supporters.",
       linkText: "Spread the Word",
       icon: <Share2 className="text-4xl text-[#892626]" />, 
-      message: "Hi, I want to help spread the word about your organization!"
+      message: "", 
+      socialLinks: true
     },
   ];
 
@@ -46,7 +45,7 @@ export default function GetInvolvedPage() {
         tagline="Join us in our mission to empower young Africans and drive sustainable change across the continent."
       />
 
-      {/* Ways to Get Involved */}
+     
       <section className="py-16 bg-[#faf7ed]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -60,12 +59,41 @@ export default function GetInvolvedPage() {
                     <h3 className="text-2xl font-bold text-[#892626] ml-4">{option.title}</h3>
                   </div>
                   <p className="text-gray-700 mb-6">{option.description}</p>
-                  <Link
-                    href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(option.message)}`}
-                    className="bg-[#F08232] hover:bg-[#e07122] text-white font-bold py-2 px-6 rounded-md transition-colors inline-block"
-                  >
-                    {option.linkText}
-                  </Link>
+
+                 
+                  {!option.socialLinks ? (
+                    <Link
+                      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(option.message)}`}
+                      className="bg-[#F08232] hover:bg-[#e07122] text-white font-bold py-2 px-6 rounded-md transition-colors inline-block"
+                    >
+                      {option.linkText}
+                    </Link>
+                  ) : (
+                  
+                    <div className="flex space-x-4">
+                      <a
+                        href="https://www.facebook.com"
+                        className="text-[#892626] hover:text-[#F08232]"
+                      >
+                        <span className="sr-only">Facebook</span>
+                       <Facebook />
+                      </a>
+                      <a
+                        href="https://twitter.com"
+                        className="text-[#892626] hover:text-[#F08232]"
+                      >
+                        <span className="sr-only">Twitter</span>
+                      <Twitter />
+                      </a>
+                      <a
+                        href="https://www.instagram.com"
+                        className="text-[#892626] hover:text-[#F08232]"
+                      >
+                        <span className="sr-only">Instagram</span>
+                        <Instagram />
+                      </a>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
