@@ -7,7 +7,7 @@ const contactInfo = [
   {
     icon: <Mail className="text-white" size={24} />,
     title: "Email",
-    details: ["reactivafrica@gmail.com"],
+    details: ["reactivafrica@gmail.com", "info@reactivateafrica.org"],
     link: "mailto:reactivafrica@gmail.com",
   },
   {
