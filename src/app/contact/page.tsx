@@ -16,12 +16,6 @@ const contactInfo = [
     details: ["+234 704 133 4617"],
     link: "tel:+2347041334617",
   },
-  // {
-  //   icon: <Instagram className="text-white" size={24} />,
-  //   title: "Social Media",
-  //   details: ["@ReactivateAfrica"],
-  //   link: "https://instagram.com/ReactivateAfrica",
-  // },
   {
     icon: <MapPin className="text-white" size={24} />,
     title: "Address",
