@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 flex justify-between items-center py-3">
-        {/* Logo */}
+        
         <Link href="/" className="flex items-center gap-2">
           <div className="p-1">
             <Image 
@@ -35,7 +35,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
+        
         <nav className="hidden md:flex space-x-6 items-center">
           {navItems.map((item) => (
             <Link
@@ -54,7 +54,7 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile Menu Button */}
+        
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -65,7 +65,7 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        
         {isOpen && (
           <div className="fixed inset-0 bg-white z-50 flex flex-col items-center pt-24 px-6 md:hidden">
             <nav className="flex flex-col space-y-6 w-full max-w-md">
