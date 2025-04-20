@@ -30,8 +30,8 @@ export default function ImpactStatsNew() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   
-  const impacted = useCountUp(5000, 4000, isInView); // 4 seconds
-  const sdgAgents = useCountUp(6800, 8000, isInView); // 8 seconds
+  const impacted = useCountUp(5000, 4000, isInView);
+  const sdgAgents = useCountUp(6800, 8000, isInView); 
 
   return (
     <section ref={ref} className="py-16">
