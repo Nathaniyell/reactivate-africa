@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-[#892626] text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {/* Brand Column */}
+      
           <div className="space-y-6 hover:bg-[#ffffff1a] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
             <div className="flex items-center">
               <div className="bg-white p-2 rounded-lg mr-4">
@@ -46,7 +46,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          
           <div>
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-[#f7923e]/30">Quick Links</h3>
             <nav className="grid grid-cols-1 gap-3 hover:bg-[#ffffff1a] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
@@ -69,7 +69,7 @@ export default function Footer() {
             </nav>
           </div>
 
-          {/* Contact Us */}
+         
           <div>
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-[#f7923e]/30">Contact Us</h3>
             <div className="space-y-4 hover:bg-[#ffffff1a] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
