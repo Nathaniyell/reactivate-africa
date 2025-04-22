@@ -36,7 +36,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden bg-[#f7923e] text-white py-24 md:py-32">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-[#f7923e] mix-blend-overlay filter blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-[#892626] mix-blend-overlay filter blur-3xl"></div>
           <div className="absolute bottom-10 right-20 w-60 h-60 rounded-full bg-[#892626] mix-blend-overlay filter blur-3xl"></div>
         </div>
 
@@ -104,7 +104,7 @@ export default function ContactPage() {
                 <div className="p-8 text-center">
                   <MapPin className="mx-auto text-[#892626]" size={48} />
                   <p className="mt-4 text-gray-600">Map will be displayed here</p>
-                  <p className="text-sm mt-2 text-gray-500">123 Foundation Street, Lagos, Nigeria</p>
+                  <p className="text-sm mt-2 text-gray-500">{address}</p>
                 </div>
               </div>
 
