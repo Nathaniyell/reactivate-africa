@@ -156,7 +156,7 @@ const programs = [
     ]
   }
 ];
-const address = "Address- 10 Ebong Street, Off Wellington Bassey Way, Uyo - Nigeria "
+const address = "10 Ebong Street, Off Wellington Bassey Way, Uyo - Nigeria "
 export {
   impactPathways,
   focusAreas,

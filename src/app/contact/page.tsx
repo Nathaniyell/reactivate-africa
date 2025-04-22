@@ -33,7 +33,7 @@ export default function ContactPage() {
     <div className="">
 
       {/* Let's Connect Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#892626] to-[#f7923e] text-white py-24 md:py-32">
+      <section className="relative overflow-hidden bg-[#f7923e] text-white py-24 md:py-32">
         {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-[#f7923e] mix-blend-overlay filter blur-3xl"></div>
