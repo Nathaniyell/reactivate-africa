@@ -106,8 +106,8 @@ const programs = [
       "Support teachers in public schools with professional development opportunities."
     ],
     images: [
-      "/raf2.jpg",
-      "/raf1.jpg"
+      "/raf_talk.jpg",
+      "/raf2.jpg"
     ]
   },
   {

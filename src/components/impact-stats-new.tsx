@@ -38,7 +38,7 @@ export default function ImpactStatsNew() {
     <section ref={ref} className="py-16">
       <div className="container md:w-10/12 mx-auto px-4">
         <div className="grid place-items-center gap-12">
-          <div className="flex flex-col md:flex-row items-center justify-between w-full">
+          <div className="flex flex-col gap-4 md:gap-0 md:flex-row md:items-center justify-between w-full">
             <Image src="/raf_mobile2.jpg" alt="raf" width={500} height={200}
               className="object-cover rounded-lg" />
             <div>
@@ -48,7 +48,7 @@ export default function ImpactStatsNew() {
               <p className="text-3xl mt-2 text-gray-700 font-medium">people impacted</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row-reverse items-center justify-between w-full">
+          <div className="flex flex-col gap-4 md:gap-0 md:flex-row-reverse md:items-center justify-between w-full">
             <Image src="/raf_mobile.jpg" alt="raf" width={500} height={200}
               className="object-cover rounded-lg" />
             <div>
