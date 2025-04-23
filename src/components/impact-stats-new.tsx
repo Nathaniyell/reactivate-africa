@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import { useInView } from "framer-motion";
+import Image from "next/image";
 
 function useCountUp(to: number, duration: number, startCounting: boolean) {
   const [count, setCount] = useState(0);
@@ -29,26 +30,33 @@ function useCountUp(to: number, duration: number, startCounting: boolean) {
 export default function ImpactStatsNew() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  
+
   const impacted = useCountUp(5000, 4000, isInView);
-  const sdgAgents = useCountUp(6800, 8000, isInView); 
+  const sdgAgents = useCountUp(6800, 8000, isInView);
 
   return (
     <section ref={ref} className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 place-items-center gap-12">
-          <div>
-            <h2 className="text-7xl md:text-9xl text-neutral-900">
-              {impacted.toLocaleString()}+
-            </h2>
-            <p className="text-3xl mt-2 text-gray-700 font-medium">people impacted</p>
+      <div className="container md:w-10/12 mx-auto px-4">
+        <div className="grid place-items-center gap-12">
+          <div className="flex flex-col md:flex-row items-center justify-between w-full">
+            <Image src="/raf_mobile2.jpg" alt="raf" width={500} height={200}
+              className="object-cover rounded-lg" />
+            <div>
+              <h2 className="text-7xl md:text-9xl text-neutral-900">
+                {impacted.toLocaleString()}+
+              </h2>
+              <p className="text-3xl mt-2 text-gray-700 font-medium">people impacted</p>
+            </div>
           </div>
-
-          <div>
-            <h2 className="text-7xl md:text-9xl text-neutral-900">
-              {sdgAgents.toLocaleString()}
-            </h2>
-            <p className="text-3xl mt-2 text-gray-700 font-medium">SDG Agents by 2029</p>
+          <div className="flex flex-col md:flex-row-reverse items-center justify-between w-full">
+            <Image src="/raf_mobile.jpg" alt="raf" width={500} height={200}
+              className="object-cover rounded-lg" />
+            <div>
+              <h2 className="text-7xl md:text-9xl text-neutral-900">
+                {sdgAgents.toLocaleString()}
+              </h2>
+              <p className="text-3xl mt-2 text-gray-700 font-medium">SDG Agents by 2029</p>
+            </div>
           </div>
         </div>
       </div>
