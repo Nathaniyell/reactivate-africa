@@ -1,6 +1,7 @@
 import HeroSection from "@/components/component-hero"
 import Link from "next/link"
 import { Handshake, Heart, Users, Share2, Instagram, Twitter, Facebook } from 'lucide-react';  
+import { tagline } from "@/lib/data";
 export default function GetInvolvedPage() {
 
   const whatsappNumber = '+2348084753771'; 
@@ -42,7 +43,7 @@ export default function GetInvolvedPage() {
       <HeroSection
         title="Get"
         title2="Involved"
-        tagline="Join us in our mission to empower young Africans and drive sustainable change across the continent."
+        tagline={tagline}
       />
 
      
