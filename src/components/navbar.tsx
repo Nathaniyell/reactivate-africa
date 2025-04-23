@@ -38,7 +38,7 @@ export default function Navbar() {
             />
           </div>
           <span className="text-xl font-bold text-[#f3693a]">
-            Reactivate <br className="sm-hidden" /> Africa
+            Reactivate <br className="sm:hidden" /> Africa
           </span>
         </Link>
 
