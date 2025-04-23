@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { tagline } from "@/lib/data";
 
 
 function useTypewriter(text: string, speed: number = 100) {
@@ -37,7 +38,7 @@ export default function Hero() {
     '/raf6.jpg',
   ];
 
-  const tagline = "Inspiring Youth-led Change";
+  
   const { displayedText, isTypingComplete } = useTypewriter(tagline, 100);
   const [showButton, setShowButton] = useState(false);
 

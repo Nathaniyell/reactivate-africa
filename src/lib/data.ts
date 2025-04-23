@@ -157,11 +157,13 @@ const programs = [
   }
 ];
 const address = "10 Ebong Street, Off Wellington Bassey Way, Uyo - Nigeria "
+const tagline = "Inspiring Youth-led Change Across Africa";
 export {
   impactPathways,
   focusAreas,
   strategies,
   coreValues,
   programs,
-  address
+  address,
+  tagline
 }
