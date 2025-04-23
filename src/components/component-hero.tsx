@@ -35,7 +35,7 @@ const HeroSection = ({
                     {!backgroundImage && (
                         <div className="mb-4 inline-block px-4 py-2 bg-[#892626]/10 rounded-full">
                             <span className="text-[#892626] font-semibold tracking-wider">
-                                Inspiring Youth-led Change
+                               {tagline}
                             </span>
                         </div>
                     )}
