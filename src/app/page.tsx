@@ -24,6 +24,7 @@ export default function Home() {
       <FeaturedPrograms />
       </ScrollAnimationWrapper>
       <FocusImpact />
+      <hr className="border border-slate-200" />
       <ImpactStatsNew />
       <CTASection />
     </div>
