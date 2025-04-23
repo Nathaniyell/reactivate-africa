@@ -35,7 +35,7 @@ const teamData = {
     { name: "Lucky Udoekong", role: "Head, Administration & Finance", image: "/lucky_U.jpg" },
     { name: "Itohowo Ekerete", role: "Head, Programs", image: "/itohowo.jpg" },
     { name: "Emem Julius", role: "Head, Communications & Partnerships", image: "/emem.jpg" },
-    { name: "Mbuotidem Ekarika", role: "Identity Management & Creative Lead", image: "/mboutidem.jpg" },
+    { name: "Mbuotidem Ekarika", role: "Identity Management & Creative Lead", image: "/mb.jpg" },
   ],
 };
 
@@ -48,7 +48,7 @@ const TeamMemberCard = ({
   <div
     className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow border border-gray-100`}
   >
-    <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border border-gray-200 relative">
+    <div className="w-64 h-64 rounded-full mx-auto mb-4 overflow-hidden border border-gray-200 relative">
       {image ? (
         <Image
           src={image}
