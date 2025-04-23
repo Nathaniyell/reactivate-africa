@@ -1,9 +1,11 @@
 import HeroSection from "@/components/component-hero";
+import Image from "next/image";
 
 interface TeamMember {
   initials?: string;
-  name?: string;
+  name: string;
   role?: string;
+  image?: string;
 }
 
 interface TeamSectionProps {
@@ -16,11 +18,11 @@ interface TeamSectionProps {
 
 const teamData = {
   boardOfTrustees: [
-    { name: "Dr Amah Williams", role: "Board Chair" },
-    { name: "Pst Emmanuel Jones", role: "Board Member" },
+    { name: "Dr Amah Williams", role: "Board Chair", image: "/amah_wills.jpg" },
+    { name: "Pst Emmanuel Jones", role: "Board Member", image: "/jones.JPG" },
     { name: "Dr (Mrs) Eno Attah", role: "Board Member" },
     { name: "Mrs Jenneh Kormoh", role: "Board Member" },
-    { name: "Pharm Eteyen Willie", role: "Board Member" },
+    { name: "Pharm Eteyen Willie", role: "Board Member", image: "/eteyen_wills.jpg" },
     { name: "Dr Ukoima U", role: "Board Member" },
     { name: "Williams G. Kennedy", role: "Board Member" },
   ],
@@ -29,28 +31,38 @@ const teamData = {
     { name: "Barr. Ekemini Ikpe" },
   ],
   managementTeam: [
-    { name: "Willie Akpan", role: "Executive Director" },
-    { name: "Lucky Udoekong", role: "Head, Administration & Finance" },
-    { name: "Itohowo Ekerete", role: "Head, Programs" },
-    { role: "Head, Communications & Partnerships" },
-    { role: "Head, Volunteers" },
-    { name: "Mbuotidem Ekarika", role: "Identity Management & Creative Lead" },
-    { role: "Administrative Assistant" },
+    { name: "Willie Akpan", role: "Executive Director", image: "/willie.jpg" },
+    { name: "Lucky Udoekong", role: "Head, Administration & Finance", image: "/lucky_U.jpg" },
+    { name: "Itohowo Ekerete", role: "Head, Programs", image: "/itohowo.jpg" },
+    { name: "Emem Julius", role: "Head, Communications & Partnerships", image: "/emem.jpg" },
+    { name: "Mbuotidem Ekarika", role: "Identity Management & Creative Lead", image: "/mboutidem.jpg" },
   ],
 };
 
 const TeamMemberCard = ({
   name,
   role,
+  image,
   bgColor = "bg-gray-50",
 }: TeamMember & { bgColor?: string }) => (
   <div
     className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow border border-gray-100`}
   >
-    <div className="w-20 h-20 bg-[#F5F5F5] rounded-full mx-auto mb-4 flex items-center justify-center">
-      <span className="text-[#892626] text-xl font-semibold">
-        {name?.split(" ").map((n) => n[0]).join("")}
-      </span>
+    <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border border-gray-200 relative">
+      {image ? (
+        <Image
+          src={image}
+          alt={name}
+          fill
+          className="object-cover"
+        />
+      ) : (
+        <div className="w-full h-full bg-[#F5F5F5] flex items-center justify-center">
+          <span className="text-[#892626] text-xl font-semibold">
+            {name?.split(" ").map((n) => n[0]).join("")}
+          </span>
+        </div>
+      )}
     </div>
     {name && <h4 className="text-lg font-semibold text-black">{name}</h4>}
     {role && <p className="text-sm text-[#F08232] mt-1">{role}</p>}
@@ -69,7 +81,6 @@ const TeamSection = ({
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-[#892626] mb-4">{title}</h2>
         {title !== "" && <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>}
-
       </div>
       <div className={`grid ${columns} gap-6 max-w-6xl mx-auto`}>
         {members.map((member, index) => (
@@ -77,6 +88,7 @@ const TeamSection = ({
             key={index}
             name={member.name}
             role={member.role}
+            image={member.image}
             bgColor={cardBgColor}
           />
         ))}
@@ -99,8 +111,10 @@ export default function TeamPage() {
           members={teamData.managementTeam}
           columns="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
         />
-        <TeamSection title="Board of Trustees" members={teamData.boardOfTrustees} />
-
+        <TeamSection
+          title="Board of Trustees"
+          members={teamData.boardOfTrustees}
+        />
         <TeamSection
           title="Advisory Committee"
           members={teamData.advisoryCommittee}
@@ -108,7 +122,6 @@ export default function TeamPage() {
           cardBgColor="bg-white"
           columns="grid-cols-1 sm:grid-cols-2 max-w-3xl"
         />
-
       </div>
     </>
   );
