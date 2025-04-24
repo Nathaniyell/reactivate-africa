@@ -89,8 +89,20 @@ const programs = [
       "Empower youth with skills and resources to drive community transformation."
     ],
     images: [
-      "/raf2.jpg",
-      "/raf1.jpg"
+      "/tf/tf.jpg",
+      "/tf/tf1.jpg",
+      "/tf/tf2.jpg",
+      "/tf/tf3.jpg",
+      "/tf/tf4.jpg",
+      "/tf/tf5.jpg",
+      "/tf/tf6.jpg",
+      "/tf/tf7.jpg",
+      "/tf/tf8.jpg",
+      "/tf/tf9.jpg",
+      "/tf/tf11.jpg",
+      "/tf/tf12.jpg",
+      "/tf/tf13.jpg",
+      "/tf/tf14.jpg",
     ]
   },
   {
