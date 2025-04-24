@@ -20,11 +20,11 @@ const teamData = {
   boardOfTrustees: [
     { name: "Dr Amah Williams", role: "Board Chair", image: "/amah_wills.jpg" },
     { name: "Pst Emmanuel Jones", role: "Board Member", image: "/jones2.jpg" },
-    { name: "Dr (Mrs) Eno Attah", role: "Board Member" },
+    { name: "Dr (Mrs) Eno Attah", role: "Board Member", image: "/blankw.jpg" },
     // { name: "Mrs Jenneh Kormoh", role: "Board Member" },
     { name: "Pharm Eteyen Willie", role: "Board Member", image: "/eteyen_wills.jpg" },
-    { name: "Dr Ukoima U", role: "Board Member" },
-    { name: "Williams G. Kennedy", role: "Board Member" },
+    { name: "Dr Ukoima U", role: "Board Member", image: "/blankm.jpg" },
+    { name: "Williams G. Kennedy", role: "Board Member" , image: "/blankm.jpg"},
   ],
   advisoryCommittee: [
     { name: "Mr. Emmanuel Ikule" },
