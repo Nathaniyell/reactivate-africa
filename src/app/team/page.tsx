@@ -27,8 +27,8 @@ const teamData = {
     { name: "Williams G. Kennedy", role: "Board Member" , image: "/blankm.jpg"},
   ],
   advisoryCommittee: [
-    { name: "Mr. Emmanuel Ikule" },
-    { name: "Barr. Ekemini Ikpe" },
+    { name: "Mr. Emmanuel Ikule" , image: "/blankm.jpg"},
+    { name: "Barr. Ekemini Ikpe" , image: "/blankm.jpg"},
   ],
   managementTeam: [
     { name: "Willie Akpan", role: "Executive Director", image: "/willie.jpg" },
