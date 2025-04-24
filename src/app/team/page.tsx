@@ -33,8 +33,8 @@ const teamData = {
   managementTeam: [
     { name: "Willie Akpan", role: "Executive Director", image: "/willie.jpg" },
     { name: "Lucky Udoekong", role: "Administrative Lead", image: "/lucky_U.jpg" },
-    { name: "Itohowo Ekerete", role: "Head, Programs", image: "/itohowo.jpg" },
-    { name: "Emem Julius", role: "Head, Communications & Partnerships", image: "/emem.jpg" },
+    { name: "Itohowo Ekerete", role: "Programs Lead", image: "/itohowo.jpg" },
+    { name: "Emem Julius", role: "Lead, Communications & Partnerships", image: "/emem.jpg" },
     { name: "Mbuotidem Ekarika", role: "Identity Management & Creative Lead", image: "/mb.jpg" },
   ],
 };
