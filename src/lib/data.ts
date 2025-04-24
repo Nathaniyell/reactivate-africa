@@ -99,10 +99,17 @@ const programs = [
       "/tf/tf7.jpg",
       "/tf/tf8.jpg",
       "/tf/tf9.jpg",
+      "/tf/tf10.jpg",
       "/tf/tf11.jpg",
       "/tf/tf12.jpg",
       "/tf/tf13.jpg",
       "/tf/tf14.jpg",
+      "/tf/tf15.jpg",
+      "/tf/tf16.jpg",
+      "/tf/tf17.jpg",
+      "/tf/tf18.jpg",
+      "/tf/tf19.jpg",
+      "/tf/tf20.jpg",
     ]
   },
   {
