@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
-import { address } from "@/lib/data";
+import { address, tagline } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -22,9 +22,9 @@ export default function Footer() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#f7923e] to-[#e18f49]">
-                  Reactivate Africa
+                  Reactivate Africa Foundation
                 </h2>
-                <p className="text-sm text-white/80">Inspiring Youth-led Change</p>
+                <p className="text-sm text-white/80">{tagline}</p>
               </div>
             </div>
 

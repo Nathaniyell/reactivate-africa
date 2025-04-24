@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar"; 
+import Navbar from "@/components/navbar";
 import Footer from "@/components/footer"
+import { tagline } from "@/lib/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Reactivate Africa Foundation | Empowering Youth-Led Change",
+  title: `Reactivate Africa Foundation | ${tagline}`,
   description:
     "Reactivate Africa Foundation empowers young Africans through entrepreneurship, education, and leadership innovations to drive sustainable change across Africa since 2019.",
   keywords: [
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
       "Empowering young Africans to drive sustainable change through entrepreneurship, education, and leadership innovations since 2019.",
     images: [
       {
-        url: "/og-image.jpg", 
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Reactivate Africa Foundation",
@@ -52,10 +53,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reactivate Africa Foundation | Empowering Youth-Led Change",
+    title: "Reactivate Africa Foundation | h-Led Change",
     description:
       "Empowering young Africans to drive sustainable change through entrepreneurship, education, and leadership innovations.",
-    images: ["/twitter-image.jpg"], 
+    images: ["/twitter-image.jpg"],
     creator: "@ReactivateAfrica",
   },
   viewport: "width=device-width, initial-scale=1",
