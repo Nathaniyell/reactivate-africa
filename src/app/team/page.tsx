@@ -21,7 +21,7 @@ const teamData = {
     { name: "Dr Amah Williams", role: "Board Chair", image: "/amah_wills.jpg" },
     { name: "Pst Emmanuel Jones", role: "Board Member", image: "/jones2.jpg" },
     { name: "Dr (Mrs) Eno Attah", role: "Board Member" },
-    { name: "Mrs Jenneh Kormoh", role: "Board Member" },
+    // { name: "Mrs Jenneh Kormoh", role: "Board Member" },
     { name: "Pharm Eteyen Willie", role: "Board Member", image: "/eteyen_wills.jpg" },
     { name: "Dr Ukoima U", role: "Board Member" },
     { name: "Williams G. Kennedy", role: "Board Member" },
