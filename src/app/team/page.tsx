@@ -23,12 +23,12 @@ const teamData = {
     { name: "Dr (Mrs) Eno Attah", role: "Board Member", image: "/blankw.jpg" },
     // { name: "Mrs Jenneh Kormoh", role: "Board Member" },
     { name: "Pharm Eteyen Willie", role: "Board Member", image: "/eteyen_wills.jpg" },
-    { name: "Dr Ukoima U", role: "Board Member", image: "/blankm.jpg" },
-    { name: "Williams G. Kennedy", role: "Board Member" , image: "/blankm.jpg"},
+    { name: "Dr Ukoima U", role: "Board Member", image: "/blannk.jpg" },
+    { name: "Williams G. Kennedy", role: "Board Member" , image: "/blannk.jpg"},
   ],
   advisoryCommittee: [
-    { name: "Mr. Emmanuel Ikule" , image: "/blankm.jpg"},
-    { name: "Barr. Ekemini Ikpe" , image: "/blankm.jpg"},
+    { name: "Mr. Emmanuel Ikule" , image: "/blannk.jpg"},
+    { name: "Barr. Ekemini Ikpe" , image: "/blannk.jpg"},
   ],
   managementTeam: [
     { name: "Willie Akpan", role: "Executive Director", image: "/willie.jpg" },
