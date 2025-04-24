@@ -51,7 +51,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {contactInfo.map((item, index) => (
             <div key={index} className="bg-white shadow-sm rounded-xl p-6 border border-gray-100 hover:shadow-md transition-all">
-              <div className="flex items-start gap-4 mb-4">
+              <div className="flex items-center gap-4">
                 <div className="p-3 bg-[#f7923e]/10 rounded-full">
                   {item.icon}
                 </div>
