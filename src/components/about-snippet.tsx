@@ -8,7 +8,7 @@ export default function AboutSnippet() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative w-full h-96">
             <Image
-              src="/raf2.jpg"
+              src="/raf1.jpg"
               alt="About Reactivate Africa Foundation"
               className="object-cover rounded-md"
               fill
