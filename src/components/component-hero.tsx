@@ -4,6 +4,7 @@ type HeroProps = {
     tagline?: string;
     isContactPage?: boolean;
     backgroundImage?: string;
+    tagline2?: string;
 };
 
 const HeroSection = ({
@@ -12,6 +13,7 @@ const HeroSection = ({
     title2,
     isContactPage,
     backgroundImage,
+    tagline2
 }: HeroProps) => {
     return (
         <section
@@ -35,7 +37,7 @@ const HeroSection = ({
                     {!backgroundImage && (
                         <div className="mb-4 inline-block px-4 py-2 bg-[#892626]/10 rounded-full">
                             <span className="text-[#892626] font-semibold tracking-wider">
-                               {tagline}
+                                {tagline}
                             </span>
                         </div>
                     )}
@@ -49,8 +51,7 @@ const HeroSection = ({
                     </h1>
 
                     <p className={`max-w-3xl mx-auto text-lg md:text-xl ${backgroundImage ? 'text-white/90' : 'text-gray-700'} mb-6 leading-relaxed`}>
-                        {tagline ||
-                            "Transforming lives through education, entrepreneurship, and leadership development initiatives designed for Africa's youth."}
+                        {tagline2}
                     </p>
 
                 </div>

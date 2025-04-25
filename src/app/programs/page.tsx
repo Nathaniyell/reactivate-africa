@@ -6,12 +6,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from 'swiper/modules';
 import "swiper/css";
 import Image from "next/image";
-import { programs } from "@/lib/data";
+import { programs, tagline } from "@/lib/data";
 
 export default function ProgramsPage() {
   return (
     <div>
-      <HeroSection isContactPage />
+      <HeroSection tagline={tagline} isContactPage />
       <section className="max-w-6xl mx-auto py-16 bg-white">
         <div className="container mx-auto px-2 md:px-4">
           <div className="space-y-12 max-w-5xl mx-auto">

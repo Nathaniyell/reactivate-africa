@@ -12,7 +12,7 @@ export default function AboutPage() {
         title="About"
         title2="Us"
         backgroundImage="/raf2.jpg"
-        tagline="Learn about our mission, vision, and the impact we're making across Africa."
+        tagline2="Learn about our mission, vision, and the impact we're making across Africa."
       />
       {/* About Us Section */}
       <section className="max-w-6xl mx-auto py-16 bg-white">

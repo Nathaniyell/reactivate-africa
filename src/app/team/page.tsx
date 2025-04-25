@@ -1,4 +1,5 @@
 import HeroSection from "@/components/component-hero";
+import { tagline } from "@/lib/data";
 import Image from "next/image";
 
 interface TeamMember {
@@ -103,7 +104,8 @@ export default function TeamPage() {
       <HeroSection
         title="Our"
         title2="Team"
-        tagline="Meet the dedicated individuals behind Reactivate Africa Foundation."
+        tagline={tagline}
+        tagline2="Meet the dedicated individuals behind Reactivate Africa Foundation."
       />
       <div className="max-w-6xl mx-auto">
         <TeamSection
