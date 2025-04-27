@@ -32,10 +32,10 @@ function useTypewriter(text: string, speed: number = 100) {
 
 export default function Hero() {
   const backgroundImages = [
-    '/raf_talk.jpg',
     '/raf1.jpg',
     '/raf2.jpg',
     '/raf_girls.jpg',
+    '/raf_talk.jpg',
   ];
 
   
