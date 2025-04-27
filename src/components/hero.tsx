@@ -34,7 +34,9 @@ export default function Hero() {
   const backgroundImages = [
     '/raf1.jpg',
     '/raf2.jpg',
-    '/raf_girls.jpg',
+    '/raf_will.jpg',
+    '/hero3.jpg',
+    '/hero2.jpg',
     '/raf_talk.jpg',
   ];
 
