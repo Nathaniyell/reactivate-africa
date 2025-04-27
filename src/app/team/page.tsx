@@ -79,35 +79,35 @@ const teamData = {
       name: "Willie Akpan", 
       role: "Founder & Executive Director", 
       image: "/willie.jpg",
-      bio: "JEFF's regional director and executor of our organisation's initiatives, Willie is a passionate non-profit founder, project manager, and skilled administrative professional with a strong commitment to building a better society. Through his NGO, Reactivate Africa, Willie works passionately to provide support and resources for young people to thrive academically and socially through putting up impactful projects. As an advocate for the Sustainable Development Goals (SDGs) with the UN-SDSH and SDG Ambassador at UNAccc, he is dedicated to creating a positive and sustainable impact on the world through diverse projects and initiatives.",
+      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
       linkedin: "#"
     },
     { 
       name: "Lucky Udoekong", 
       role: "Administrative Lead", 
       image: "/lucky_U.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
       linkedin: "#"
     },
     { 
       name: "Itohowo Ekerete", 
       role: "Programs Lead", 
       image: "/itohowo.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
       linkedin: "#"
     },
     { 
       name: "Emem Julius", 
       role: "Lead, Communications & Partnerships", 
       image: "/emem.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
       linkedin: "#"
     },
     { 
       name: "Mbuotidem Ekarika", 
       role: "Identity Management & Creative Lead", 
       image: "/mb.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
       linkedin: "#"
     },
   ],
