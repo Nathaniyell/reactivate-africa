@@ -7,7 +7,6 @@ import { IoIosHeart } from "react-icons/io";
 import { phoneNumber, tagline } from "@/lib/data";
 export default function GetInvolvedPage() {
 
-  //spreaad the word should take to the social media pages
   
   const involvementOptions = [
     {
@@ -43,9 +42,10 @@ export default function GetInvolvedPage() {
   return (
     <>
       <HeroSection
+      backgroundImage="/hero2.jpg"
         title="Get"
         title2="Involved"
-        tagline={tagline}
+        tagline2={tagline}
       />
 
      
