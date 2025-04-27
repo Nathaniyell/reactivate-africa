@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FaLinkedin, FaXTwitter, FaFacebook, FaPhone } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import Image from "next/image";
 import { address, tagline } from "@/lib/data";
 
@@ -34,10 +37,10 @@ export default function Footer() {
 
             <div className="flex space-x-4">
               {[
-                { icon: <Facebook size={20} />, href: "https://www.facebook.com/share/192DDjjaFc/" },
-                { icon: <Twitter size={20} />, href: "https://x.com/ReactivateAfric?t=R5WsmcApATVRcIB3jIIqXg&s=09" },
-                { icon: <Instagram size={20} />, href: "https://www.instagram.com/reactivateafrica?igsh=Y2F5YzR3MmpiN3Np" },
-                { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/company/reactivate-africa-foundation/" },
+                { icon: <FaFacebook size={20} />, href: "https://www.facebook.com/share/192DDjjaFc/" },
+                { icon: <FaXTwitter size={20} />, href: "https://x.com/ReactivateAfric?t=R5WsmcApATVRcIB3jIIqXg&s=09" },
+                { icon: <FaInstagram size={20} />, href: "https://www.instagram.com/reactivateafrica?igsh=Y2F5YzR3MmpiN3Np" },
+                { icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/company/reactivate-africa-foundation/" },
               ].map((item, index) => (
                 <a key={index} href={item.href} className="text-white/80 hover:text-[#f7923e] transition-colors">
                   {item.icon}
@@ -74,7 +77,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-[#f7923e]/30">Contact Us</h3>
             <div className="space-y-4 hover:bg-[#ffffff1a] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
               <div className="flex items-start">
-                <MapPin className="mt-1 mr-3 flex-shrink-0 text-[#f7923e]" size={18} />
+                <FaMapMarkerAlt className="mt-1 mr-3 flex-shrink-0 text-[#f7923e]" size={18} />
+               
                 <span className="text-white/80">{address}</span>
               </div>
               <div className="flex items-center">
@@ -89,7 +93,7 @@ export default function Footer() {
               </div>
               </div>
               <div className="flex items-center">
-                <Phone className="mr-3 text-[#f7923e]" size={18} />
+                <FaPhone className="mr-3 text-[#f7923e]" size={18} />
                 <a href="tel:+2347041334617" className="text-white/80 hover:text-[#f7923e] transition-colors">
                   +234 704 133 4617
                 </a>

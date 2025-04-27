@@ -3,7 +3,7 @@ import HeroSection from "@/components/component-hero";
 import { tagline } from "@/lib/data";
 import Image from "next/image";
 import { useState } from "react";
-import { Linkedin } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 
 interface TeamMember {
   initials?: string;
@@ -154,7 +154,7 @@ const TeamMemberCard = ({
             rel="noopener noreferrer"
             className="text-[#0077B5] hover:text-[#005582]"
           >
-            <Linkedin size={20} />
+            <FaLinkedin size={20} />
           </a>
         )}
         {bio && (
@@ -186,7 +186,7 @@ const ExecutiveDirectorCard = ({
   const [showBio, setShowBio] = useState(false);
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto mb-12 border border-gray-200">
+    <div className="bg-white p-8 rounded-lg shadow max-w-4xl mx-auto mb-12 border border-gray-200">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-[#892626] relative flex-shrink-0">
           <Image
@@ -214,7 +214,7 @@ const ExecutiveDirectorCard = ({
                 rel="noopener noreferrer"
                 className="text-[#0077B5] hover:text-[#005582]"
               >
-                <Linkedin size={24} />
+                <FaLinkedin size={24} />
               </a>
             )}
             <button 
@@ -279,7 +279,7 @@ export default function TeamPage() {
         <section className="py-12 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#892626] mb-4">Executive Director</h2>
+              <h2 className="text-3xl font-bold text-[#892626] mb-4">Management Team</h2>
               <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>
             </div>
             <ExecutiveDirectorCard {...executiveDirector} />
@@ -288,7 +288,7 @@ export default function TeamPage() {
 
         {/* Management Team */}
         <TeamSection
-          title="Management Team"
+          title=""
           members={otherManagement}
           bgColor="bg-white"
         />
