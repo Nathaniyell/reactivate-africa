@@ -126,7 +126,6 @@ const programs = [
     ],
     images: [
       "/gt/gt7.jpg",
-      "/gt/gt.jpg",
       "/gt/gt1.jpg",
       "/gt/gt2.jpg",
       "/gt/gt3.jpg",
@@ -134,6 +133,7 @@ const programs = [
       "/gt/gt5.jpg",
       "/gt/gt6.jpg",
       "/gt/gt0.jpg",      
+      //remove repeating image
     ]
   },
   {
@@ -142,8 +142,8 @@ const programs = [
     description:
       "SDG Connect is a flagship initiative committed to driving the United Nations Sustainable Development Goals (SDGs) in African communities over a five-year period ending in December 2029. The program leverages:",
     features: [
-      "Monthly webinar series to educate individuals on the SDGs.",
-      "Quarterly SDG Impact Challenges to encourage youth-led initiatives that support SDG implementation."
+      "Webinar series to educate individuals on the SDGs.",
+      "SDG Impact Challenges to encourage youth-led initiatives that support SDG implementation."
     ],
     objectivesTitle: "Impact Goals by 2029:",
     objectives: [
@@ -152,28 +152,16 @@ const programs = [
       "Expand participation across multiple African countries."
     ],
     images: [
-      "/sdg/sd.jpg",
-      "/sdg/sd1.jpg",
-      "/sdg/sd2.jpg",
-      "/sdg/sd3.jpg",
-      "/sdg/sd4.jpg",
-      "/sdg/sd5.jpg",
-      "/sdg/sd6.jpg",
-      "/sdg/sd7.jpg",
-      "/sdg/sd8.jpg",
-      "/sdg/sd9.jpg",
-      "/sdg/sd10.jpg",
-      "/sdg/sd11.jpg",
-      "/sdg/sd12.jpg",
-      "/sdg/sd13.jpg",
-      "/sdg/sd14.jpg",      
+      "/sdg/sd12.png",
+      "/sdg/sd13.png",
+      "/sdg/sd14.png",      
     ]
   },
   {
     id: "yealx-africa",
-    title: "YOUTH ENTREPRENEURSHIP, ACADEMIC & LEADERSHIP EXCELLENCE (YEALX-AFRICA)",
+    title: "YOUTH ENTREPRENEURSHIP, ACADEMIC & LEADERSHIP EXCELLENCE (Youth-EALx-AFRICA)",
     description:
-      "YEALX-Africa is a platform fostering social innovation and entrepreneurship among young people, equipping them with the knowledge and skills to drive sustainable development. The program aims to:",
+      "Youth-EALx-Africa is a platform fostering social innovation and entrepreneurship among young people, equipping them with the knowledge and skills to drive sustainable development. The program aims to:",
     objectives: [
       "Engage 1,000 young people annually in leadership, entrepreneurship, and education.",
       "Support youth-led ventures and economic growth.",
@@ -182,6 +170,7 @@ const programs = [
     images: [
       "/raf1.jpg",
       "/raf2.jpg"
+      //the picture should be removed and an ai picture be used to show futuristic program
     ]
   },
   {
@@ -204,7 +193,6 @@ const programs = [
       "/raftr/raftr12.jpg",
       "/raftr/raftr13.jpg",
       "/raftr/raftr14.jpg",
-      "/raftr/raftr15.jpg",
       "/raftr/raftr16.jpg",
       "/raftr/raftr17.jpg",   
     ]
