@@ -29,7 +29,7 @@ export default function Footer() {
             </div>
 
             <p className="text-white/80 leading-relaxed">
-              Transforming lives through education, entrepreneurship, and leadership development initiatives.
+              Transforming lives through education, entrepreneurship, leadership and social development initiatives.
             </p>
 
             <div className="flex space-x-4">

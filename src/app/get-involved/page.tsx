@@ -1,10 +1,10 @@
 import HeroSection from "@/components/component-hero"
 import Link from "next/link"
-import { Handshake, Heart, Users, Share2, Instagram, Twitter, Facebook } from 'lucide-react';  
-import { tagline } from "@/lib/data";
+import { Handshake, Heart, Users, Share2, Instagram, Twitter, Facebook, Linkedin} from 'lucide-react';  
+import { phoneNumber, tagline } from "@/lib/data";
 export default function GetInvolvedPage() {
 
-  const whatsappNumber = '+2348084753771'; 
+  //spreaad the word should take to the social media pages
   
   const involvementOptions = [
     {
@@ -37,7 +37,6 @@ export default function GetInvolvedPage() {
       socialLinks: true
     },
   ];
-
   return (
     <>
       <HeroSection
@@ -64,7 +63,7 @@ export default function GetInvolvedPage() {
                  
                   {!option.socialLinks ? (
                     <Link
-                      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(option.message)}`}
+                      href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(option.message)}`}
                       className="bg-[#F08232] hover:bg-[#e07122] text-white font-bold py-2 px-6 rounded-md transition-colors inline-block"
                       target="_blank"
                     >
@@ -74,25 +73,32 @@ export default function GetInvolvedPage() {
                   
                     <div className="flex space-x-4">
                       <a
-                        href="https://www.facebook.com"
+                        href="https://www.facebook.com/share/192DDjjaFc/"
                         className="text-[#892626] hover:text-[#F08232]"
                       >
                         <span className="sr-only">Facebook</span>
                        <Facebook />
                       </a>
                       <a
-                        href="https://twitter.com"
+                        href="https://x.com/ReactivateAfric?t=R5WsmcApATVRcIB3jIIqXg&s=09"
                         className="text-[#892626] hover:text-[#F08232]"
                       >
                         <span className="sr-only">Twitter</span>
                       <Twitter />
                       </a>
                       <a
-                        href="https://www.instagram.com"
+                        href="https://www.instagram.com/reactivateafrica?igsh=Y2F5YzR3MmpiN3Np"
                         className="text-[#892626] hover:text-[#F08232]"
                       >
                         <span className="sr-only">Instagram</span>
                         <Instagram />
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/company/reactivate-africa-foundation/"
+                        className="text-[#892626] hover:text-[#F08232]"
+                      >
+                        <span className="sr-only">Linkedin</span>
+                        <Linkedin />
                       </a>
                     </div>
                   )}

@@ -21,7 +21,7 @@ const teamData = {
   boardOfTrustees: [
     { name: "Dr Amah Williams", role: "Board Chair", image: "/amah_wills.jpg" },
     { name: "Pst Emmanuel Jones", role: "Board Member", image: "/jones2.jpg" },
-    { name: "Dr (Mrs) Eno Attah", role: "Board Member", image: "/blankw.jpg" },
+    // { name: "Dr (Mrs) Eno Attah", role: "Board Member", image: "/blankw.jpg" },
     // { name: "Mrs Jenneh Kormoh", role: "Board Member" },
     { name: "Pharm Eteyen Willie", role: "Board Member", image: "/eteyen_wills.jpg" },
     { name: "Dr Ukoima U", role: "Board Member", image: "/blannk.jpg" },
@@ -32,14 +32,15 @@ const teamData = {
     { name: "Barr. Ekemini Ikpe" , image: "/blannk.jpg"},
   ],
   managementTeam: [
-    { name: "Willie Akpan", role: "Founder & Executive Director", image: "/willie.jpg" },
+    { name: "Willie Akpan", role: "Founder & Executive Director", image: "/willie.jpg" }, //make willie to stand alone then the rest should come under
     { name: "Lucky Udoekong", role: "Administrative Lead", image: "/lucky_U.jpg" },
     { name: "Itohowo Ekerete", role: "Programs Lead", image: "/itohowo.jpg" },
     { name: "Emem Julius", role: "Lead, Communications & Partnerships", image: "/emem.jpg" },
     { name: "Mbuotidem Ekarika", role: "Identity Management & Creative Lead", image: "/mb.jpg" },
   ],
 };
-
+//include a linkedin icon in the cards with a link to each persons linkedin page
+//there should be a readmore buttoflexed with the icon so that when clicked, a brief bio abotut that person comes up
 const TeamMemberCard = ({
   name,
   role,
@@ -104,6 +105,7 @@ export default function TeamPage() {
       <HeroSection
         title="Our"
         title2="Team"
+        backgroundImage="/raf2.jpg"
         tagline={tagline}
         tagline2="Meet the dedicated individuals behind Reactivate Africa Foundation."
       />

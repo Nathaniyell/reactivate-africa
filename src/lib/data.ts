@@ -200,6 +200,7 @@ const programs = [
 ];
 const address = "10 Ebong Street, Off Wellington Bassey Way, Uyo - Nigeria "
 const tagline = "Inspiring Youth-led Change Across Africa";
+const phoneNumber = "+234 704 133 4617"
 export {
   impactPathways,
   focusAreas,
@@ -207,5 +208,6 @@ export {
   coreValues,
   programs,
   address,
-  tagline
+  tagline,
+  phoneNumber
 }
