@@ -12,16 +12,16 @@ export default function AboutPage() {
       <HeroSection
         title="About"
         title2="Us"
-        backgroundImage="/raf1.jpg"
+        backgroundImage="/hero3.jpg"
         tagline2="Learn about our mission, vision, and the impact we're making across Africa."
       />
       {/* About Us Section */}
       <section className="max-w-6xl mx-auto py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#892626] mb-4">Our Story</h2>
-          <div className="flex flex-col-reverse lg:flex-row gap-6 justify-between">
-            <div className="space-y-4 lg:w-[90%] text-gray-700 leading-relaxed">
+            <h2 className="text-5xl md:text-7xl font-bold text-[#892626] mb-8">Our Story</h2>
+          <div className="flex flex-col-reverse gap-6 justify-between">
+            <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Reactivate Africa Foundation is a non-profit organization established in 2019 with a mission to empower
                 young Africans to drive sustainable change in their communities through entrepreneurship, education, and
