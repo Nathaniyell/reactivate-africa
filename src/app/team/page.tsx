@@ -1,12 +1,17 @@
+"use client"
 import HeroSection from "@/components/component-hero";
 import { tagline } from "@/lib/data";
 import Image from "next/image";
+import { useState } from "react";
+import { Linkedin } from "lucide-react";
 
 interface TeamMember {
   initials?: string;
   name: string;
   role?: string;
   image?: string;
+  bio?: string;
+  linkedin?: string;
 }
 
 interface TeamSectionProps {
@@ -19,57 +24,211 @@ interface TeamSectionProps {
 
 const teamData = {
   boardOfTrustees: [
-    { name: "Dr Amah Williams", role: "Board Chair", image: "/amah_wills.jpg" },
-    { name: "Pst Emmanuel Jones", role: "Board Member", image: "/jones2.jpg" },
-    // { name: "Dr (Mrs) Eno Attah", role: "Board Member", image: "/blankw.jpg" },
-    // { name: "Mrs Jenneh Kormoh", role: "Board Member" },
-    { name: "Pharm Eteyen Willie", role: "Board Member", image: "/eteyen_wills.jpg" },
-    { name: "Dr Ukoima U", role: "Board Member", image: "/blannk.jpg" },
-    { name: "Williams G. Kennedy", role: "Board Member" , image: "/blannk.jpg"},
+    { 
+      name: "Dr Amah Williams", 
+      role: "Board Chair", 
+      image: "/amah_wills.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
+    { 
+      name: "Pst Emmanuel Jones", 
+      role: "Board Member", 
+      image: "/jones2.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
+    { 
+      name: "Pharm Eteyen Willie", 
+      role: "Board Member", 
+      image: "/eteyen_wills.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
+    { 
+      name: "Dr Ukoima U", 
+      role: "Board Member", 
+      image: "/blannk.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
+    { 
+      name: "Williams G. Kennedy", 
+      role: "Board Member", 
+      image: "/blannk.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
   ],
   advisoryCommittee: [
-    { name: "Mr. Emmanuel Ikule" , image: "/blannk.jpg"},
-    { name: "Barr. Ekemini Ikpe" , image: "/blannk.jpg"},
+    { 
+      name: "Mr. Emmanuel Ikule", 
+      image: "/blannk.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
+    { 
+      name: "Barr. Ekemini Ikpe", 
+      image: "/blannk.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
   ],
   managementTeam: [
-    { name: "Willie Akpan", role: "Founder & Executive Director", image: "/willie.jpg" }, //make willie to stand alone then the rest should come under
-    { name: "Lucky Udoekong", role: "Administrative Lead", image: "/lucky_U.jpg" },
-    { name: "Itohowo Ekerete", role: "Programs Lead", image: "/itohowo.jpg" },
-    { name: "Emem Julius", role: "Lead, Communications & Partnerships", image: "/emem.jpg" },
-    { name: "Mbuotidem Ekarika", role: "Identity Management & Creative Lead", image: "/mb.jpg" },
+    { 
+      name: "Willie Akpan", 
+      role: "Founder & Executive Director", 
+      image: "/willie.jpg",
+      bio: "JEFF's regional director and executor of our organisation's initiatives, Willie is a passionate non-profit founder, project manager, and skilled administrative professional with a strong commitment to building a better society. Through his NGO, Reactivate Africa, Willie works passionately to provide support and resources for young people to thrive academically and socially through putting up impactful projects. As an advocate for the Sustainable Development Goals (SDGs) with the UN-SDSH and SDG Ambassador at UNAccc, he is dedicated to creating a positive and sustainable impact on the world through diverse projects and initiatives.",
+      linkedin: "#"
+    },
+    { 
+      name: "Lucky Udoekong", 
+      role: "Administrative Lead", 
+      image: "/lucky_U.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
+    { 
+      name: "Itohowo Ekerete", 
+      role: "Programs Lead", 
+      image: "/itohowo.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
+    { 
+      name: "Emem Julius", 
+      role: "Lead, Communications & Partnerships", 
+      image: "/emem.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
+    { 
+      name: "Mbuotidem Ekarika", 
+      role: "Identity Management & Creative Lead", 
+      image: "/mb.jpg",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      linkedin: "#"
+    },
   ],
 };
-//include a linkedin icon in the cards with a link to each persons linkedin page
-//there should be a readmore buttoflexed with the icon so that when clicked, a brief bio abotut that person comes up
+
 const TeamMemberCard = ({
   name,
   role,
   image,
+  bio,
+  linkedin,
   bgColor = "bg-gray-50",
-}: TeamMember & { bgColor?: string }) => (
-  <div
-    className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow border border-gray-100`}
-  >
-    <div className="w-64 h-64 rounded-full mx-auto mb-4 overflow-hidden border border-gray-200 relative">
-      {image ? (
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-cover"
-        />
-      ) : (
-        <div className="w-full h-full bg-[#F5F5F5] flex items-center justify-center">
-          <span className="text-[#892626] text-xl font-semibold">
-            {name?.split(" ").map((n) => n[0]).join("")}
-          </span>
+}: TeamMember & { bgColor?: string }) => {
+  const [showBio, setShowBio] = useState(false);
+
+  return (
+    <div
+      className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow border border-gray-100 relative`}
+    >
+      <div className="w-64 h-64 rounded-full mx-auto mb-4 overflow-hidden border border-gray-200 relative">
+        {image ? (
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover"
+          />
+        ) : (
+          <div className="w-full h-full bg-[#F5F5F5] flex items-center justify-center">
+            <span className="text-[#892626] text-xl font-semibold">
+              {name?.split(" ").map((n) => n[0]).join("")}
+            </span>
+          </div>
+        )}
+      </div>
+      {name && <h4 className="text-lg font-semibold text-black">{name}</h4>}
+      {role && <p className="text-sm text-[#F08232] mt-1">{role}</p>}
+      
+      <div className="mt-4 flex justify-center space-x-4">
+        {linkedin && (
+          <a 
+            href={linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[#0077B5] hover:text-[#005582]"
+          >
+            <Linkedin size={20} />
+          </a>
+        )}
+        {bio && (
+          <button 
+            onClick={() => setShowBio(!showBio)}
+            className="text-[#892626] text-sm font-medium hover:underline"
+          >
+            {showBio ? 'Read Less' : 'Read More'}
+          </button>
+        )}
+      </div>
+      
+      {showBio && bio && (
+        <div className="mt-4 text-sm text-gray-600 text-left">
+          {bio}
         </div>
       )}
     </div>
-    {name && <h4 className="text-lg font-semibold text-black">{name}</h4>}
-    {role && <p className="text-sm text-[#F08232] mt-1">{role}</p>}
-  </div>
-);
+  );
+};
+
+const ExecutiveDirectorCard = ({
+  name,
+  role,
+  image,
+  bio,
+  linkedin,
+}: TeamMember) => {
+  const [showBio, setShowBio] = useState(false);
+
+  return (
+    <div className="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto mb-12 border border-gray-200">
+      <div className="flex flex-col md:flex-row gap-8 items-center">
+        <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-[#892626] relative flex-shrink-0">
+          <Image
+            src={image || "/blannk.jpg"}
+            alt={name}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="text-left">
+          <h3 className="text-2xl font-bold text-[#892626]">{name}</h3>
+          <p className="text-lg text-[#F08232] mb-4">{role}</p>
+          <div className="prose prose-sm max-w-none">
+            {showBio ? (
+              <p className="text-gray-700">{bio}</p>
+            ) : (
+              <p className="text-gray-700 line-clamp-3">{bio}</p>
+            )}
+          </div>
+          <div className="mt-4 flex items-center space-x-4">
+            {linkedin && (
+              <a 
+                href={linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#0077B5] hover:text-[#005582]"
+              >
+                <Linkedin size={24} />
+              </a>
+            )}
+            <button 
+              onClick={() => setShowBio(!showBio)}
+              className="text-[#892626] font-medium hover:underline"
+            >
+              {showBio ? 'Read Less' : 'Read More'}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const TeamSection = ({
   title,
@@ -80,10 +239,12 @@ const TeamSection = ({
 }: TeamSectionProps) => (
   <section className={`py-8 ${bgColor}`}>
     <div className="container mx-auto px-4">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-[#892626] mb-4">{title}</h2>
-        {title !== "" && <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>}
-      </div>
+      {title && (
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-[#892626] mb-4">{title}</h2>
+          <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>
+        </div>
+      )}
       <div className={`grid ${columns} gap-6 max-w-6xl mx-auto`}>
         {members.map((member, index) => (
           <TeamMemberCard
@@ -91,6 +252,8 @@ const TeamSection = ({
             name={member.name}
             role={member.role}
             image={member.image}
+            bio={member.bio}
+            linkedin={member.linkedin}
             bgColor={cardBgColor}
           />
         ))}
@@ -100,30 +263,48 @@ const TeamSection = ({
 );
 
 export default function TeamPage() {
+  const [executiveDirector, ...otherManagement] = teamData.managementTeam;
+
   return (
     <>
       <HeroSection
         title="Our"
         title2="Team"
-        backgroundImage="/raf2.jpg"
+        backgroundImage="/raf1.jpg"
         tagline={tagline}
         tagline2="Meet the dedicated individuals behind Reactivate Africa Foundation."
       />
       <div className="max-w-6xl mx-auto">
+        {/* Executive Director Section */}
+        <section className="py-12 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-[#892626] mb-4">Executive Director</h2>
+              <div className="w-20 h-1 bg-[#F08232] mx-auto"></div>
+            </div>
+            <ExecutiveDirectorCard {...executiveDirector} />
+          </div>
+        </section>
+
+        {/* Management Team */}
         <TeamSection
-          title=""
-          members={teamData.managementTeam}
-          columns="grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+          title="Management Team"
+          members={otherManagement}
+          bgColor="bg-white"
         />
+
+        {/* Board of Trustees */}
         <TeamSection
           title="Board of Trustees"
           members={teamData.boardOfTrustees}
+          bgColor="bg-gray-50"
         />
+
+        {/* Advisory Committee */}
         <TeamSection
           title="Advisory Committee"
           members={teamData.advisoryCommittee}
-          bgColor="bg-gray-50"
-          cardBgColor="bg-white"
+          bgColor="bg-white"
           columns="grid-cols-1 sm:grid-cols-2 max-w-3xl"
         />
       </div>

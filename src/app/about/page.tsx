@@ -3,6 +3,7 @@ import FocusImpact from "@/components/focus-impact";
 import Pathways from "@/components/impact-pathways";
 import { coreValues } from "@/lib/data";
 import { Target, Rocket } from "lucide-react";
+import Image from "next/image";
 
 
 export default function AboutPage() {
@@ -11,7 +12,7 @@ export default function AboutPage() {
       <HeroSection
         title="About"
         title2="Us"
-        backgroundImage="/raf2.jpg"
+        backgroundImage="/raf1.jpg"
         tagline2="Learn about our mission, vision, and the impact we're making across Africa."
       />
       {/* About Us Section */}
@@ -19,6 +20,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-[#892626] mb-4">Our Story</h2>
+          <div className="flex flex-col-reverse md:items-center gap-6 justify-between">
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 Reactivate Africa Foundation is a non-profit organization established in 2019 with a mission to empower
@@ -38,6 +40,16 @@ export default function AboutPage() {
                 to inspiring and equipping young people with the tools necessary to lead ethically and build sustainable
                 communities.
               </p>
+            </div>
+            <div className="relative w-full h-96">
+            <Image
+              src="/raf1.jpg"
+              alt="About Reactivate Africa Foundation"
+              className="object-cover rounded-md"
+              fill
+              priority
+            />
+          </div>
             </div>
           </div>
         </div>
