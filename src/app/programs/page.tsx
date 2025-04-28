@@ -76,11 +76,11 @@ export default function ProgramsPage() {
               </div>
 
               {/* Rest of your content remains the same */}
-              <div className="space-y-6">
-                <div>
+              <div className="space-y-2">
+                {/* <div>
                   <h3 className="text-3xl font-bold text-[#892626]">{program.title}</h3>
                   <div className="w-20 h-1 bg-[#F08232] mt-2"></div>
-                </div>
+                </div> */}
 
                 <p className="text-gray-700 leading-relaxed text-lg">{program.description}</p>
 

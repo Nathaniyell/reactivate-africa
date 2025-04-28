@@ -99,17 +99,10 @@ const programs = [
       "/tf/tf7.jpg",
       "/tf/tf8.jpg",
       "/tf/tf9.jpg",
-      "/tf/tf10.jpg",
       "/tf/tf11.jpg",
       "/tf/tf12.jpg",
       "/tf/tf13.jpg",
       "/tf/tf14.jpg",
-      "/tf/tf15.jpg",
-      "/tf/tf16.jpg",
-      "/tf/tf17.jpg",
-      "/tf/tf18.jpg",
-      "/tf/tf19.jpg",
-      "/tf/tf20.jpg",
     ]
   },
   {
@@ -168,9 +161,7 @@ const programs = [
       "Recognize and award outstanding young entrepreneurs and leaders making a difference in their communities."
     ],
     images: [
-      "/raf1.jpg",
-      "/raf2.jpg"
-      //the picture should be removed and an ai picture be used to show futuristic program
+      "/yealx.png",
     ]
   },
   {
@@ -179,15 +170,12 @@ const programs = [
     description:
       "The RAF Changemakers Fellowship is dedicated to promoting sustainable development by equipping young Africans with in-demand entrepreneurship and tech skills. Since 2019, we have partnered with reputable tech firms like Wedigraf Technologies to offer fully-funded programs that foster self-reliance and economic empowerment.",
     images: [
-      "/raftr/raftr1.jpg",
       "/raftr/raftr2.jpg",
       "/raftr/raftr3.jpg",
       "/raftr/raftr4.jpg",
       "/raftr/raftr5.jpg",
       "/raftr/raftr6.jpg",
-      "/raftr/raftr7.jpg",
-      "/raftr/raftr8.jpg",
-      "/raftr/raftr9.jpg",
+      "/raftr/raftr7.jpg",    
       "/raftr/raftr10.jpg",
       "/raftr/raftr11.jpg",
       "/raftr/raftr12.jpg",
