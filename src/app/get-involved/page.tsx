@@ -80,21 +80,21 @@ export default function GetInvolvedPage() {
                         className="text-[#892626] hover:text-[#F08232]"
                       >
                         <span className="sr-only">Facebook</span>
-                       <FaFacebook />
+                       <FaFacebook className="text-4xl" />
                       </a>
                       <a
                         href="https://x.com/ReactivateAfric?t=R5WsmcApATVRcIB3jIIqXg&s=09"
                         className="text-[#892626] hover:text-[#F08232]"
                       >
                         <span className="sr-only">Twitter</span>
-                      <FaXTwitter />
+                      <FaXTwitter className="text-4xl" />
                       </a>
                       <a
                         href="https://www.instagram.com/reactivateafrica?igsh=Y2F5YzR3MmpiN3Np"
                         className="text-[#892626] hover:text-[#F08232]"
                       >
                         <span className="sr-only">Instagram</span>
-                        <FaInstagram />
+                        <FaInstagram className="text-4xl" />
                         
                       </a>
                       <a
@@ -102,7 +102,7 @@ export default function GetInvolvedPage() {
                         className="text-[#892626] hover:text-[#F08232]"
                       >
                         <span className="sr-only">Linkedin</span>
-                        <FaLinkedin />
+                        <FaLinkedin className="text-4xl" />
                       </a>
                     </div>
                   )}
