@@ -81,7 +81,7 @@ const teamData = {
       role: "Founder & Executive Director", 
       image: "/willie.jpg",
       bio: "Willie Akpan is the visionary founder of Reactivate Africa and a dedicated leader in the fields of project management, entrepreneurship, brand consulting, and administrative coordination. With extensive experience in driving sustainable development initiatives across diverse sectors, Willie is deeply committed to creating a society where opportunities for growth are accessible to all, particularly the youth. \nHe holds certifications in Leadership and Sustainable Development, equipping him with the expertise to lead and contribute meaningfully to development-driven projects. Willie is recognized as an SDG Advocate by the UN Sustainable Development Solutions Network (UN-SDSN) Nigeria and has served as an Honorary SDG Ambassador with the Unity of Nations Action for Climate Change Council (UNAccc). \nIn addition to his role at Reactivate Africa, Willie serves as the Programmes Coordinator, Nigeria for the Jones Foundation, a UK-based NGO dedicated to empowering leaders and entrepreneurs globally. Passionate about social innovation and sustainable development, Willie actively collaborates with individuals and organizations to amplify his impact. \nA strong advocate for Africa's transformation, he inspires others with the mantra #InspireTheZeal and #ForTheAfricaWeWant, reflecting his deep belief that Africa can fully realize its potential when the right aspirations and energies are ignited.",
-      linkedin: "#"
+      linkedin: "https://www.linkedin.com/in/willie-akpan-17b720218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
     { 
       name: "Lucky Udoekong", 
