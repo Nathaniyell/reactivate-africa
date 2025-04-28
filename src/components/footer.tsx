@@ -37,10 +37,10 @@ export default function Footer() {
 
             <div className="flex space-x-4">
               {[
-                { icon: <FaFacebook size={20} />, href: "https://www.facebook.com/share/192DDjjaFc/" },
-                { icon: <FaXTwitter size={20} />, href: "https://x.com/ReactivateAfric?t=R5WsmcApATVRcIB3jIIqXg&s=09" },
-                { icon: <FaInstagram size={20} />, href: "https://www.instagram.com/reactivateafrica?igsh=Y2F5YzR3MmpiN3Np" },
-                { icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/company/reactivate-africa-foundation/" },
+                { icon: <FaFacebook size={28} />, href: "https://www.facebook.com/share/192DDjjaFc/" },
+                { icon: <FaXTwitter size={28} />, href: "https://x.com/ReactivateAfric?t=R5WsmcApATVRcIB3jIIqXg&s=09" },
+                { icon: <FaInstagram size={28} />, href: "https://www.instagram.com/reactivateafrica?igsh=Y2F5YzR3MmpiN3Np" },
+                { icon: <FaLinkedin size={28} />, href: "https://www.linkedin.com/company/reactivate-africa-foundation/" },
               ].map((item, index) => (
                 <a key={index} href={item.href} className="text-white/80 hover:text-[#f7923e] transition-colors">
                   {item.icon}
