@@ -90,6 +90,8 @@ const programs = [
     ],
     images: [
       "/hero2.jpg",
+      "/hero4.jpg",
+      "/raf1.jpg",
       "/tf/tf.jpg",
       "/tf/tf1.jpg",
       "/tf/tf2.jpg",
@@ -104,7 +106,9 @@ const programs = [
       "/tf/tf12.jpg",
       "/tf/tf13.jpg",
       "/tf/tf14.jpg",
-      "/hero3.jpg",
+      "/hero5.jpg",
+      "/hero6.jpg",
+      "/hero7.jpg",
     ]
   },
   {
