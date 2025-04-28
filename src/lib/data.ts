@@ -156,7 +156,7 @@ const programs = [
     id: "yealx-africa",
     title: "YOUTH ENTREPRENEURSHIP, ACADEMIC & LEADERSHIP EXCELLENCE (Youth-EALx-AFRICA)",
     description:
-      "Youth-EALx-Africa is a platform fostering social innovation and entrepreneurship among young people, equipping them with the knowledge and skills to drive sustainable development. The program aims to:",
+      "Youth-EALx-Africa is a platform fostering social innovation and entrepreneurship among young people, equipping them with the knowledge and skills to drive sustainable development. This upcoming program will: ",
     objectives: [
       "Engage 1,000 young people annually in leadership, entrepreneurship, and education.",
       "Support youth-led ventures and economic growth.",
