@@ -41,7 +41,7 @@ export default function ProgramsPage() {
                         alt={`${program.title} image ${index + 1}`}
                         fill
                         priority
-                        className="object-contain bg-gray-50"
+                        className="object-contain bg-gray-50  rounded-xl"
                         sizes="100vw"
                       />
                     </SwiperSlide>
@@ -51,26 +51,44 @@ export default function ProgramsPage() {
 
               {/* Desktop Grid (md and above) */}
               <div className="hidden md:block">
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                <div
+                  className={program.id === "yealx-africa"
+                    ? "grid grid-cols-1 place-items-center"
+                    : "grid grid-cols-2 lg:grid-cols-3 gap-4"
+                  }
+                >
                   {program.images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="relative w-full h-64 lg:h-80 rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center"
-                    >
-                      <Image
-                        src={image}
-                        alt={`${program.title} image ${index + 1}`}
-                        width={600}
-                        height={400}
-                        priority
-                        className="object-contain max-w-full max-h-full p-2 hover:scale-105 transition-transform duration-300"
-                        style={{
-                          width: 'auto',
-                          height: 'auto'
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300" />
-                    </div>
+                    program.id === "yealx-africa" ? (
+                      <div key={index} className="relative w-full h-96 rounded-xl overflow-hidden flex items-center justify-center">
+                        <Image
+                          src={program.images[0]}
+                          alt={`${program.title} featured image`}
+                          fill
+                          priority
+                          className="object-contain rounded-xl"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        key={index}
+                        className="relative w-full h-64 lg:h-80 rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center"
+                      >
+                        <Image
+                          src={image}
+                          alt={`${program.title} image ${index + 1}`}
+                          width={600}
+                          height={400}
+                          priority
+                          className="object-contain max-w-full max-h-full p-2  rounded-xl hover:scale-105 transition-transform duration-300"
+                          style={{
+                            width: 'auto',
+                            height: 'auto'
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300" />
+                      </div>
+                    )
+
                   ))}
                 </div>
               </div>
