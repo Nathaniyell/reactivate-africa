@@ -12,7 +12,7 @@ export default function AboutPage() {
       <HeroSection
         title="About"
         title2="Us"
-        backgroundImage="/hero3.jpg"
+        backgroundImage="/tf/tf12.jpg"
         tagline2="Learn about our mission, vision, and the impact we're making across Africa."
       />
       {/* About Us Section */}

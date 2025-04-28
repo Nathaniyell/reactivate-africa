@@ -37,7 +37,7 @@ export default function Hero() {
     '/raf_will.jpg',
     '/hero3.jpg',
     '/hero2.jpg',
-    // '/raf_talk.jpg',
+    '/tf/tf7.jpg',
   ];
 
   
