@@ -38,6 +38,7 @@ export default function Hero() {
     '/hero3.jpg',
     '/hero2.jpg',
     '/tf/tf7.jpg',
+    "/tf/hero7.jpg",
   ];
 
   
