@@ -18,10 +18,14 @@ export default function ProgramsPage() {
             <div
               key={program.id}
               id={program.id}
-              className="space-y-8 bg-white p-2 md:p-10 rounded-2xl shadow-sm hover:shadow-ms transition-shadow border border-gray-100"
+              className="space-y-8 bg-white p-2 md:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
             >
-              {/* Image Section First */}
-              <div className="relative w-full h-[300px] md:h-[450px] rounded-xl overflow-hidden">
+              <div>
+                <h3 className="text-3xl font-bold text-[#892626]">{program.title}</h3>
+                <div className="w-20 h-1 bg-[#F08232] mt-2"></div>
+              </div>
+              {/* Mobile Slider (below md) */}
+              <div className="md:hidden relative w-full h-[300px] rounded-xl overflow-hidden">
                 <Swiper
                   spaceBetween={20}
                   slidesPerView={1}
@@ -37,15 +41,41 @@ export default function ProgramsPage() {
                         alt={`${program.title} image ${index + 1}`}
                         fill
                         priority
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 700px"
+                        className="object-contain bg-gray-50"
+                        sizes="100vw"
                       />
                     </SwiperSlide>
                   ))}
                 </Swiper>
               </div>
 
-              {/* Text Section */}
+              {/* Desktop Grid (md and above) */}
+              <div className="hidden md:block">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                  {program.images.map((image, index) => (
+                    <div
+                      key={index}
+                      className="relative w-full h-64 lg:h-80 rounded-xl overflow-hidden bg-gray-50 flex items-center justify-center"
+                    >
+                      <Image
+                        src={image}
+                        alt={`${program.title} image ${index + 1}`}
+                        width={600}
+                        height={400}
+                        priority
+                        className="object-contain max-w-full max-h-full p-2 hover:scale-105 transition-transform duration-300"
+                        style={{
+                          width: 'auto',
+                          height: 'auto'
+                        }}
+                      />
+                      <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Rest of your content remains the same */}
               <div className="space-y-6">
                 <div>
                   <h3 className="text-3xl font-bold text-[#892626]">{program.title}</h3>
