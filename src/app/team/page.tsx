@@ -20,6 +20,7 @@ interface TeamSectionProps {
   bgColor?: string;
   cardBgColor?: string;
   columns?: string;
+  borderColor?: string;
 }
 
 const teamData = {
@@ -79,7 +80,7 @@ const teamData = {
       name: "Willie Akpan", 
       role: "Founder & Executive Director", 
       image: "/willie.jpg",
-      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
+      bio: "Willie Akpan is the visionary founder of Reactivate Africa and a dedicated leader in the fields of project management, entrepreneurship, brand consulting, and administrative coordination. With extensive experience in driving sustainable development initiatives across diverse sectors, Willie is deeply committed to creating a society where opportunities for growth are accessible to all, particularly the youth. \nHe holds certifications in Leadership and Sustainable Development, equipping him with the expertise to lead and contribute meaningfully to development-driven projects. Willie is recognized as an SDG Advocate by the UN Sustainable Development Solutions Network (UN-SDSN) Nigeria and has served as an Honorary SDG Ambassador with the Unity of Nations Action for Climate Change Council (UNAccc). \nIn addition to his role at Reactivate Africa, Willie serves as the Programmes Coordinator, Nigeria for the Jones Foundation, a UK-based NGO dedicated to empowering leaders and entrepreneurs globally. Passionate about social innovation and sustainable development, Willie actively collaborates with individuals and organizations to amplify his impact. \nA strong advocate for Africa's transformation, he inspires others with the mantra #InspireTheZeal and #ForTheAfricaWeWant, reflecting his deep belief that Africa can fully realize its potential when the right aspirations and energies are ignited.",
       linkedin: "#"
     },
     { 
@@ -120,12 +121,13 @@ const TeamMemberCard = ({
   bio,
   linkedin,
   bgColor = "bg-gray-50",
-}: TeamMember & { bgColor?: string }) => {
+  borderColor = "border-gray-100",
+}: TeamMember & { bgColor?: string, borderColor?: string }) => {
   const [showBio, setShowBio] = useState(false);
 
   return (
     <div
-      className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow border border-gray-100 relative`}
+      className={`${bgColor} p-6 rounded-lg text-center hover:shadow-md transition-shadow !border-2 ${borderColor} relative`}
     >
       <div className="w-64 h-64 rounded-full mx-auto mb-4 overflow-hidden border border-gray-200 relative">
         {image ? (
@@ -160,7 +162,7 @@ const TeamMemberCard = ({
         {bio && (
           <button 
             onClick={() => setShowBio(!showBio)}
-            className="text-[#892626] text-sm font-medium hover:underline"
+            className="text-[#892626] text-sm font-medium hover:underline cursor-pointer"
           >
             {showBio ? 'Read Less' : 'Read More'}
           </button>
@@ -305,6 +307,7 @@ export default function TeamPage() {
           title="Advisory Committee"
           members={teamData.advisoryCommittee}
           bgColor="bg-white"
+          // borderColor="border-red-300"
           columns="grid-cols-1 sm:grid-cols-2 max-w-3xl"
         />
       </div>
