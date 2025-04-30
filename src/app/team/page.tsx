@@ -108,8 +108,8 @@ const teamData = {
       name: "Mbuotidem Ekarika", 
       role: "Identity Management & Creative Lead", 
       image: "/mb.jpg",
-      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
-      linkedin: "#"
+      bio: "Mboutidem Gibson is a seasoned graphic designer, brand strategist, and design educator. He is the founder of Kedy Grafix and Oltrix Digispace, and currently serves as the Brand Identity Manager for Reactivate Africa Foundation. With a passion for bold creativity, innovation, and empowerment, Mbuotidem combines artistic excellence with strategic insight to build impactful brand identity that inspires and showcases true brand interpretations.",
+      linkedin: "https://www.linkedin.com/in/mboutidem-gibson-157868253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
     },
   ],
 };
