@@ -19,8 +19,8 @@ export default function ProgramsPage() {
               key={program.id}
               id={program.id}
               className={`space-y-8 bg-white p-2 md:p-10 rounded-2xl border ${program.id === "yealx-africa"
-                  ? "border-2 border-dashed border-[#F08232] relative"
-                  : "border-gray-100"
+                ? "border-2 border-dashed border-[#F08232] relative"
+                : "border-gray-100"
                 }`}
             >
               {/* Coming Soon Ribbon for Youth-EALx */}
@@ -129,9 +129,16 @@ export default function ProgramsPage() {
               </div>
 
               {/* Program Content */}
-              <div className="space-y-4">
+              <div className="space-y-4 mt-2">
+                {/* <h3 className="text-3xl font-bold text-[#892626]">
+                  {program.title}
+                </h3> */}
 
-
+                {program.description && (
+                  <p className="text-gray-700">
+                    {program.description}
+                  </p>
+                )}
                 {program.features && (
                   <ul className="space-y-3">
                     {program.features.map((feature, index) => (
