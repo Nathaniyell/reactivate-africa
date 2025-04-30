@@ -94,8 +94,8 @@ const teamData = {
       name: "Itohowo Ekerete", 
       role: "Programs Lead", 
       image: "/itohowo.jpg",
-      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
-      linkedin: "#"
+      bio: "Itohowo Ekerete is a Project and Programs Manager who specializes in delivering projects on time, within budget, and tailored to meet unique client needs. With a keen eye for detail and a passion for impactful communication, she brings both precision and creativity to every project she leads. Known for her commitment to excellence and impact, Itohowo consistently leaves a strong trail of successful initiatives. \nIn 2024 she joined The Socialstar Initiative as her Programs Associate and The Content Academy in 2025 as a Programs Associate.\n She currently serves as the Head of Programs at Reactivate Africa, where she has over three years of experience designing and managing impact-driven programs. Her portfolio includes leading digital skills training, youth engagement initiatives, conferences, and community events. Her strengths lie in results-oriented execution, stakeholder coordination, and team-driven leadership, ensuring the smooth delivery of project outcomes.",
+      linkedin: "linkedin.com/in/itohowo-ekerete-7b3780200"
     },
     { 
       name: "Emem Julius", 
