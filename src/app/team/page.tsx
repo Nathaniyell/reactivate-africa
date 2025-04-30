@@ -29,35 +29,35 @@ const teamData = {
       name: "Dr Amah Williams", 
       role: "Board Chair", 
       image: "/amah_wills.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "",
       linkedin: "#"
     },
     { 
       name: "Pst Emmanuel Jones", 
       role: "Board Member", 
       image: "/jones2.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "",
       linkedin: "#"
     },
     { 
       name: "Pharm Eteyen Willie", 
       role: "Board Member", 
       image: "/eteyen_wills.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "",
       linkedin: "#"
     },
     { 
       name: "Dr Ukoima U", 
       role: "Board Member", 
       image: "/blannk.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "",
       linkedin: "#"
     },
     { 
       name: "Williams G. Kennedy", 
       role: "Board Member", 
       image: "/blannk.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "",
       linkedin: "#"
     },
   ],
@@ -65,13 +65,13 @@ const teamData = {
     { 
       name: "Mr. Emmanuel Ikule", 
       image: "/blannk.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "",
       linkedin: "#"
     },
     { 
       name: "Barr. Ekemini Ikpe", 
       image: "/blannk.jpg",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+      bio: "",
       linkedin: "#"
     },
   ],
@@ -101,7 +101,7 @@ const teamData = {
       name: "Emem Julius", 
       role: "Lead, Communications & Partnerships", 
       image: "/emem.jpg",
-      bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, blanditiis nisi? Id veniam velit similique necessitatibus itaque. Modi quae corporis voluptatem reprehenderit repellendus neque obcaecati repellat, odit enim sed ipsum, molestias beatae harum temporibus quibusdam sapiente ex saepe laudantium dicta?",
+      bio: "",
       linkedin: "#"
     },
     { 
@@ -201,13 +201,15 @@ const ExecutiveDirectorCard = ({
         <div className="text-left">
           <h3 className="text-2xl font-bold text-[#892626]">{name}</h3>
           <p className="text-lg text-[#F08232] mb-4">{role}</p>
-          <div className="prose prose-sm max-w-none">
-            {showBio ? (
-              <p className="text-gray-700">{bio}</p>
-            ) : (
-              <p className="text-gray-700 line-clamp-3">{bio}</p>
-            )}
-          </div>
+          {bio && (
+            <div className="prose prose-sm max-w-none">
+              {showBio ? (
+                <p className="text-gray-700">{bio}</p>
+              ) : (
+                <p className="text-gray-700 line-clamp-3">{bio}</p>
+              )}
+            </div>
+          )}
           <div className="mt-4 flex items-center space-x-4">
             {linkedin && (
               <a 
@@ -219,12 +221,21 @@ const ExecutiveDirectorCard = ({
                 <FaLinkedin size={24} />
               </a>
             )}
-            <button 
+            {bio && (
+              <button 
+                onClick={() => setShowBio(!showBio)}
+                className="text-[#892626] font-medium hover:underline"
+              >
+                {showBio ? 'Read Less' : 'Read More'}
+              </button>
+            )}
+          
+            {/* <button 
               onClick={() => setShowBio(!showBio)}
               className="text-[#892626] font-medium hover:underline"
             >
               {showBio ? 'Read Less' : 'Read More'}
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
