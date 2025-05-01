@@ -23,7 +23,7 @@ export default function ProgramsPage() {
                 : "border-gray-100"
                 }`}
             >
-              {/* Coming Soon Ribbon for Youth-EALx */}
+            
               {program.id === "yealx-africa" && (
                 <div className="absolute -top-3 -right-3 bg-[#F08232] text-white px-4 py-1 rounded-full text-sm font-bold z-10 shadow-md">
                   COMING SOON
@@ -37,7 +37,7 @@ export default function ProgramsPage() {
                 <div className="w-20 h-1 bg-[#F08232] mt-2"></div>
               </div>
 
-              {/* Mobile Slider (below md) */}
+             
               <div className="md:hidden relative w-full h-[300px] rounded-xl overflow-hidden">
                 {program.id === "yealx-africa" ? (
                   <div className="relative h-full w-full flex items-center justify-center rounded-xl">
@@ -80,7 +80,7 @@ export default function ProgramsPage() {
                 )}
               </div>
 
-              {/* Desktop View (md and above) */}
+            
               <div className="hidden md:block">
                 <div
                   className={program.id === "yealx-africa"
@@ -128,7 +128,7 @@ export default function ProgramsPage() {
                 </div>
               </div>
 
-              {/* Program Content */}
+              
               <div className="space-y-4 mt-2">
                 {/* <h3 className="text-3xl font-bold text-[#892626]">
                   {program.title}

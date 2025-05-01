@@ -140,7 +140,6 @@ const programs = [
       "/gt/gt5.jpg",
       "/gt/gt6.jpg",
       "/gt/gt0.jpg",      
-      //remove repeating image
     ]
   },
   {
