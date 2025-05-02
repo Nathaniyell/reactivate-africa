@@ -38,7 +38,7 @@ export default function Navbar() {
             />
           </div>
           <span className="text-xl font-semibold text-[#f3693a]">
-            Reactivate Africa <br className="sm:hidden" />Foundation
+            Reactivate Africa <br className="xl:hidden" />Foundation
           </span>
         </Link>
 
@@ -57,10 +57,16 @@ export default function Navbar() {
               )}
             </Link>
           ))}
-        </nav>
           <Link
             href="/contact"
-            className="bg-[#f3693a] hover:bg-[#f7923e] text-white px-4 py-2 rounded-lg transition-colors font-medium ml-4 shadow-md"
+            className="bg-[#f3693a] hover:bg-[#f7923e] text-white px-4 py-2 rounded-lg transition-colors font-medium ml-4 shadow-md hidden md:block xl:hidden"
+          >
+            Contact
+          </Link>
+        </nav>
+        <Link
+            href="/contact"
+            className="bg-[#f3693a] hover:bg-[#f7923e] text-white px-4 py-2 rounded-lg transition-colors font-medium ml-4 shadow-md hidden xl:block"
           >
             Contact
           </Link>
