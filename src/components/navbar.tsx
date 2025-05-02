@@ -37,13 +37,13 @@ export default function Navbar() {
               className="object-contain"
             />
           </div>
-          <span className="text-xl font-bold text-[#f3693a]">
+          <span className="text-xl font-semibold text-[#f3693a]">
             Reactivate Africa <br className="sm:hidden" />Foundation
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 items-center">
+        <nav className="hidden md:flex space-x-4 items-center">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -57,13 +57,13 @@ export default function Navbar() {
               )}
             </Link>
           ))}
+        </nav>
           <Link
             href="/contact"
             className="bg-[#f3693a] hover:bg-[#f7923e] text-white px-4 py-2 rounded-lg transition-colors font-medium ml-4 shadow-md"
           >
             Contact
           </Link>
-        </nav>
 
 
 
