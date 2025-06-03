@@ -55,9 +55,9 @@ export default function Footer() {
             <nav className="grid grid-cols-1 gap-3 hover:bg-[#ffffff1a] transform-all ease-in-out rounded-xl hover:py-2 hover:px-2 duration-300">
               {[
                 { label: "Home", href: "/" },
-                { label: "About", href: "/about" },
-                { label: "Programs", href: "/programs" },
-                { label: "Team", href: "/team" },
+                { label: "About Us", href: "/about-us" },
+                { label: "Our Programs & Projects", href: "/our-programs-and-projects" },
+                { label: "Our Team", href: "/our-team" },
                 { label: "Get Involved", href: "/get-involved" },
               ].map((item, index) => (
                 <Link

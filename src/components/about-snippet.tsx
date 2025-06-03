@@ -22,7 +22,7 @@ export default function AboutSnippet() {
               Reactivate Africa Foundation is a non-profit organization established in 2019 with a mission to empower young Africans to drive sustainable change in their communities through entrepreneurship, education, and leadership innovations. Recognizing that investing in youth is fundamental to national development and societal progress, we design our programs and initiatives to promote quality education, social innovation, leadership, and global opportunities for young people. Our efforts aim to enhance social awareness, employability, and overall livelihoods, creating a ripple effect of positive transformation across Africa.
             </p>
             <Link
-              href="/about"
+              href="/about-us"
               className="text-[#f7923e] font-medium hover:text-[#f3693a] transition-colors"
             >
               Learn more →

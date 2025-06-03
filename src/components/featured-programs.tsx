@@ -33,7 +33,7 @@ export default function FeaturedPrograms() {
                 <h3 className="text-xl font-bold text-[#892626] mb-2">{program.title}</h3>
                 <p className="text-gray-700 mb-4">{program.description}</p>
                 <Link
-                  href="/programs"
+                  href="/our-programs-and-projects"
                   className="text-[#f3693a] font-medium hover:text-[#f7923e] transition-colors flex items-center"
                 >
                   Learn More <span className="ml-1">→</span>
@@ -45,7 +45,7 @@ export default function FeaturedPrograms() {
 
         <div className="text-center mt-10">
           <Link
-            href="/programs"
+            href="/our-programs-and-projects"
             className="bg-[#f3693a] hover:bg-[#f7923e] text-white font-bold py-3 px-8 rounded-md transition-colors inline-block"
           >
             Explore All Programs
