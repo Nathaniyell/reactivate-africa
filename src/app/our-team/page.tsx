@@ -60,6 +60,13 @@ const teamData = {
       bio: "",
       linkedin: "#"
     },
+    { 
+      name: "Jenneh Kormoh", 
+      role: "Board Member", 
+      image: "/jenneh2.jpg",
+      bio: "",
+      linkedin: "#"
+    },
   ],
   advisoryCommittee: [
     { 
