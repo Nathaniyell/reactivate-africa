@@ -51,7 +51,7 @@ export default function ProgramsPage() {
                     />
                     <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
                       <span className="bg-white/90 text-[#892626] px-4 py-2 rounded-full font-bold text-sm">
-                        PROGRAM PREVIEW
+                        PROGRAM IN VIEW
                       </span>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ export default function ProgramsPage() {
                         />
                         <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
                           <span className="bg-white/90 text-[#892626] px-4 py-2 rounded-full font-bold">
-                            PROGRAM PREVIEW
+                            PROGRAM IN VIEW
                           </span>
                         </div>
                       </div>
